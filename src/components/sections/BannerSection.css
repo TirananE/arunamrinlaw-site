@@ -1,0 +1,141 @@
+.travel_banner_outer {
+  background: url('/assets/images/banner3-backgroundimage.jpg') no-repeat center;
+  background-size: cover;
+  padding: 200px 0 120px;
+  position: relative;
+}
+
+.banner_content h5 {
+  color: #FF4C1C;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.banner_content h1 {
+  color: #1C2753;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.banner_content p {
+  color: #666666;
+  margin-bottom: 40px;
+  max-width: 520px;
+}
+
+.button_wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.all_button {
+  background: #FF4C1C;
+  border-radius: 5px;
+  color: #FFFFFF;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px 30px;
+  transition: all 0.5s;
+}
+
+.all_button:hover {
+  background: #1C2753;
+  color: #FFFFFF;
+}
+
+.all_button i {
+  margin-left: 10px;
+}
+
+.get_quote {
+  background: #1C2753;
+}
+
+.get_quote:hover {
+  background: #FF4C1C;
+}
+
+.banner_wrapper {
+  position: relative;
+}
+
+.banner-image {
+  position: relative;
+  z-index: 1;
+}
+
+.box {
+  background: #FFFFFF;
+  border-radius: 10px;
+  bottom: 30px;
+  left: -30px;
+  padding: 20px;
+  position: absolute;
+  width: 280px;
+  z-index: 2;
+}
+
+.box .images {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.box .images figure {
+  border-radius: 5px;
+  overflow: hidden;
+  width: 80px;
+}
+
+.box .text {
+  text-align: left;
+}
+
+.box .text .value {
+  color: #1C2753;
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.box .text .review {
+  color: #666666;
+  font-size: 16px;
+}
+
+@media (max-width: 991px) {
+  .travel_banner_outer {
+    padding: 150px 0 80px;
+  }
+
+  .banner_content h1 {
+    font-size: 40px;
+  }
+
+  .banner_wrapper {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .travel_banner_outer {
+    padding: 120px 0 60px;
+  }
+
+  .banner_content h1 {
+    font-size: 32px;
+  }
+
+  .button_wrapper {
+    flex-direction: column;
+  }
+
+  .all_button {
+    width: fit-content;
+  }
+}
