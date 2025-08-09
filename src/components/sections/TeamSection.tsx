@@ -1,124 +1,189 @@
-import React from 'react';
-import Image from 'next/image';
+"use client";
+
+import React from "react";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
+import TeamCard from "../TeamCard";
+
+const customArrowStyles = `
+.splide__pagination {
+  bottom: -8px;
+}
+  .splide__arrow {
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #e0e0e0;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  
+  .splide__arrow:hover {
+    background: #ffffff;
+    border-color: #007bff;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 4px 20px rgba(0, 123, 255, 0.3);
+  }
+  
+  .splide__arrow--prev {
+    left: -70px;
+  }
+  
+  .splide__arrow--next {
+    right: -70px;
+  }
+  
+  .splide__arrow svg {
+    width: 20px;
+    height: 20px;
+    fill: #333;
+    transition: fill 0.3s ease;
+  }
+  
+  .splide__arrow:hover svg {
+    fill: #007bff;
+  }
+  
+  .splide__arrow:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+  
+  @media (max-width: 768px) {
+    .splide__arrow--prev {
+      display: none;
+      left: -15px;
+    }
+    
+    .splide__arrow--next {
+     display: none;
+      right: -15px;
+    }
+    
+    .splide__arrow {
+      width: 40px;
+      height: 40px;
+    }
+    
+    .splide__arrow svg {
+      width: 16px;
+      height: 16px;
+    }
+      
+  }
+`;
+
+// Team member data
+const teamMembers = [
+  {
+    name: "Suwat Apaipakdi",
+    position: "Chairman, Attorney",
+    imageUrl: "/assets/images/members/Suwat.jpg",
+  },
+  {
+    name: "Atchara Saengkhao",
+    position: "Attorney",
+    imageUrl: "/assets/images/members/Atchara.jpg",
+  },
+  {
+    name: "Atichart Saengkhao",
+    position: "Attorney",
+    imageUrl: "/assets/images/members/Atichart.jpg",
+  },
+  {
+    name: "Wilaiporn Kaewmool",
+    position: "Attorney",
+    imageUrl: "/assets/images/members/Wilaiporn.jpg",
+  },
+  {
+    name: "Thitikarn Wichianbut",
+    position: "Attorney",
+    imageUrl: "/assets/images/members/Thitikarn.jpg",
+  },
+  {
+    name: "Sasathorn Thongchai",
+    position: "Attorney",
+    imageUrl: "/assets/images/members/Sasathorn.jpg",
+  },
+  {
+    name: "Nareewat Apaipakdi",
+    position: "International client representative",
+    imageUrl: "/assets/images/members/Nareewat.jpg",
+  },
+  {
+    name: "Nareeporn Apaipakdi",
+    position: "International client representative",
+    imageUrl: "/assets/images/members/Nareeporn.jpg",
+  },
+  {
+    name: "Supisara Angthong",
+    position: "International client representative",
+    imageUrl: "/assets/images/members/Supisara.jpg",
+  },
+];
 
 const TeamSection = () => {
   return (
-    <section id="team" className="team-con travelteam-con position-relative">
-      <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <div className="team_content text-center" data-aos="fade-up">
-              <h6>Team Members</h6>
-              <h2>Team of Insurance Experts</h2>
+    <>
+      <style dangerouslySetInnerHTML={{ __html: customArrowStyles }} />
+      <section id="team" className="team-con travelteam-con position-relative">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="team_content text-center" data-aos="fade-up">
+                <h2>Our members</h2>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="row" data-aos="fade-up">
-          <div className="col-lg-4 col-md-4 col-sm-6 col-12 mx-auto">
-            <div className="team-box">
-              <figure className="team-image">
-                <Image 
-                  src="/assets/images/team-image1.jpg" 
-                  alt="team member" 
-                  width={400}
-                  height={400}
-                  className="img-fluid"
-                />
-              </figure>
-              <div className="content">
-                <h4>Marvin Joner</h4>
-                <span className="text-size-14">Sr. Manager</span>
-                <ul className="list-unstyled mb-0">
-                  <li className="icons">
-                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                      <i className="fa-brands fa-facebook-f social-networks"></i>
-                    </a>
-                  </li>
-                  <li className="icons">
-                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-                      <i className="fa-brands fa-x-twitter social-networks"></i>
-                    </a>
-                  </li>
-                  <li className="icons">
-                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                      <i className="fa-brands fa-linkedin-in social-networks"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>   
-          </div>
-          <div className="col-lg-4 col-md-4 col-sm-6 col-12 mx-auto">
-            <div className="team-box">
-              <figure className="team-image">
-                <Image 
-                  src="/assets/images/team-image2.jpg" 
-                  alt="team member" 
-                  width={400}
-                  height={400}
-                  className="img-fluid"
-                />
-              </figure>
-              <div className="content">
-                <h4>Patricia Woodrum</h4>
-                <span className="text-size-14">Accountant Assistant</span>
-                <ul className="list-unstyled mb-0">
-                  <li className="icons">
-                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                      <i className="fa-brands fa-facebook-f social-networks"></i>
-                    </a>
-                  </li>
-                  <li className="icons">
-                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-                      <i className="fa-brands fa-x-twitter social-networks"></i>
-                    </a>
-                  </li>
-                  <li className="icons">
-                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                      <i className="fa-brands fa-linkedin-in social-networks"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>   
-          </div>
-          <div className="col-lg-4 col-md-4 col-sm-6 col-12 mx-auto">
-            <div className="team-box">
-              <figure className="team-image">
-                <Image 
-                  src="/assets/images/team-image3.jpg" 
-                  alt="team member" 
-                  width={400}
-                  height={400}
-                  className="img-fluid"
-                />
-              </figure>
-              <div className="content">
-                <h4>Hannaz Stone</h4>
-                <span className="text-size-14">Jr. Employee</span>
-                <ul className="list-unstyled mb-0">
-                  <li className="icons">
-                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                      <i className="fa-brands fa-facebook-f social-networks"></i>
-                    </a>
-                  </li>
-                  <li className="icons">
-                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-                      <i className="fa-brands fa-x-twitter social-networks"></i>
-                    </a>
-                  </li>
-                  <li className="icons">
-                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                      <i className="fa-brands fa-linkedin-in social-networks"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>   
+          <div data-aos="fade-up" className="position-relative">
+            <Splide
+              options={{
+                type: "loop",
+                perPage: 3,
+                perMove: 1,
+                gap: "2rem",
+                autoplay: true,
+                interval: 4000,
+                pauseOnHover: true,
+                resetProgress: false,
+                breakpoints: {
+                  1200: {
+                    perPage: 3,
+                  },
+                  992: {
+                    perPage: 2,
+                  },
+                  768: {
+                    perPage: 1,
+                  },
+                },
+              }}
+              aria-label="Team Members Carousel"
+            >
+              {teamMembers.map((member, index) => (
+                <SplideSlide key={index}>
+                  <TeamCard
+                    name={member.name}
+                    position={member.position}
+                    imageUrl={member.imageUrl}
+                    // socialLinks={member.socialLinks}
+                  />
+                </SplideSlide>
+              ))}
+            </Splide>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
