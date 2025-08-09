@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import Preloader from "@/components/Preloader";
 import "./globals.css";
 
 const inter = Inter({
@@ -32,32 +33,24 @@ export default function RootLayout({
         <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
       </head>
       <body className={inter.variable}>
-        {/* PRE LOADER */}
-        <div className="loader-mask">
-          <div className="loader">
-            <div></div>
-            <div></div>
-          </div>
-        </div>
-
+        <Preloader />
         {children}
         
         {/* Scripts */}
-        <Script src="/assets/js/jquery-3.7.1.min.js" />
-        <Script src="/assets/js/popper.min.js" />
-        <Script src="/assets/js/bootstrap.min.js" />
-        <Script src="/assets/js/aos.js" />
-        <Script src="/assets/js/owl.carousel.js" />
-        <Script src="/assets/js/carousel.js" />
-        <Script src="/assets/js/animation.js" />
-        <Script src="/assets/js/back-to-top-button.js" />
-        <Script src="/assets/js/preloader.js" />
-        <Script src="/assets/js/contact-form.js" />
-        <Script src="/assets/js/contact-validate.js" />
-        <Script src="/assets/js/counter.js" />
+        <Script src="/assets/js/jquery-3.7.1.min.js" strategy="beforeInteractive" />
+        <Script src="/assets/js/popper.min.js" strategy="beforeInteractive" />
+        <Script src="/assets/js/bootstrap.min.js" strategy="beforeInteractive" />
+        <Script src="/assets/js/aos.js" strategy="afterInteractive" />
+        <Script src="/assets/js/owl.carousel.js" strategy="afterInteractive" />
+        <Script src="/assets/js/carousel.js" strategy="afterInteractive" />
+        <Script src="/assets/js/animation.js" strategy="afterInteractive" />
+        <Script src="/assets/js/back-to-top-button.js" strategy="afterInteractive" />
+        <Script src="/assets/js/contact-form.js" strategy="afterInteractive" />
+        <Script src="/assets/js/contact-validate.js" strategy="afterInteractive" />
+        <Script src="/assets/js/counter.js" strategy="afterInteractive" />
         
         {/* Initialize AOS */}
-        <Script id="aos-init">
+        <Script id="aos-init" strategy="afterInteractive">
           {`
             document.addEventListener('DOMContentLoaded', function() {
               AOS.init({
