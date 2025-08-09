@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const FooterSection = () => {
   return (
-    <section className="footer-con position-relative">
+    <section id="contact" className="footer-con position-relative">
       <div className="container position-relative">
         <div className="middle_portion">
           <div className="row">

@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const TypeSection = () => {
   return (
-    <section className="type-con position-relative">
+    <section id="type" className="type-con position-relative">
       <div className="container-fluid">
         <div className="row" data-aos="fade-up">
           <div className="col-lg-3 col-sm-6 col-12 p-0">

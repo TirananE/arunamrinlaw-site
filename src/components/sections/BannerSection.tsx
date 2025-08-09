@@ -5,7 +5,7 @@ import Image from 'next/image';
 const BannerSection = () => {
   return (
     <div className="travel_banner_outer position-relative">
-      <section className="travelbanner-con position-relative">
+      <section id="banner" className="travelbanner-con position-relative">
         <div className="container position-relative">
           <div className="row align-items-center">
             <div className="col-lg-7 col-md-12 col-sm-12 col-12">

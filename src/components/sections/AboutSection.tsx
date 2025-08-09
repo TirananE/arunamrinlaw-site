@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const AboutSection = () => {
   return (
-    <section className="travelabout-con position-relative">
+    <section id="about" className="travelabout-con position-relative">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6 col-md-12 col-sm-12 col-12 text-lg-left text-center">

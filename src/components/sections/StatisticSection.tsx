@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const StatisticSection = () => {
   return (
-    <section className="statistic-con position-relative">
+    <section id="statistic" className="statistic-con position-relative">
       <div className="container">
         <div className="row">
           <div className="col-12">

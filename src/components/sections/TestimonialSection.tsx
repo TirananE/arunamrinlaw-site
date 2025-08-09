@@ -1,9 +1,19 @@
-import React from 'react';
+"use client"
+
+import React, { useEffect } from 'react';
 import Image from 'next/image';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper core and required modules
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import './TestimonialSection.css';
 
 const TestimonialSection = () => {
   return (
-    <section className="hometestimonial-con traveltestimonial-con position-relative">
+    <section id="testimonial" className="hometestimonial-con traveltestimonial-con position-relative">
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -15,8 +25,20 @@ const TestimonialSection = () => {
         </div>
         <div className="row" data-aos="fade-up">
           <div className="col-12">
-            <div className="owl-carousel owl-theme">
-              <div className="item">
+            <Swiper
+              modules={[Navigation, Pagination, Autoplay]}
+              spaceBetween={30}
+              slidesPerView={1}
+              navigation
+              pagination={{ clickable: true }}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              loop={true}
+              className="testimonialSwiper"
+            >
+              <SwiperSlide>
                 <div className="testimonial-box float-left w-100">
                   <ul className="list-unstyled">
                     {[...Array(5)].map((_, i) => (
@@ -53,8 +75,8 @@ const TestimonialSection = () => {
                     </figure>
                   </div>
                 </div>
-              </div>
-              <div className="item">
+              </SwiperSlide>
+              <SwiperSlide>
                 <div className="testimonial-box float-left w-100">
                   <ul className="list-unstyled">
                     {[...Array(5)].map((_, i) => (
@@ -91,8 +113,8 @@ const TestimonialSection = () => {
                     </figure>
                   </div>
                 </div>
-              </div>
-            </div>
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
       </div>

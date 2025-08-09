@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const FeatureSection = () => {
   return (
-    <section className="feature-con position-relative">
+    <section id="feature" className="feature-con position-relative">
       <div className="container">
         <div className="row">
           <div className="col-12">

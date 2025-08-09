@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const PartnerSection = () => {
   return (
-    <section className="partner-con">
+    <section id="partner" className="partner-con">
       <div className="container">
         <div className="row">
           <div className="col-12">

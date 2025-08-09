@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const InsuranceSection = () => {
   return (
-    <section className="insurance-con position-relative">
+    <section id="insurance" className="insurance-con position-relative">
       <figure className="insurance-leftimage mb-0">
         <Image 
           src="/assets/images/choose-leftimage.png" 
