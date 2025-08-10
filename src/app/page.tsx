@@ -10,6 +10,7 @@ import InsuranceSection from '@/components/sections/InsuranceSection';
 import PartnerSection from '@/components/sections/PartnerSection';
 import FooterSection from '@/components/sections/FooterSection';
 import AboutSection2 from '@/components/sections/AboutSection2';
+import OurOfficeSection from '@/components/sections/OurOfficeSection';
 
 export default function Home() {
   return (
@@ -18,9 +19,11 @@ export default function Home() {
       {/* <FeatureSection /> */}
       <AboutSection1 />
       <AboutSection2 />
-      <StatisticSection />
       {/* <TypeSection /> */}
       <TeamSection />
+      <StatisticSection />
+      {/* To DO Our Office */}
+      <OurOfficeSection />
       {/* <TestimonialSection /> */}
       {/* <InsuranceSection /> */}
       {/* <PartnerSection /> */}
