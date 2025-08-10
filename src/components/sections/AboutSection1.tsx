@@ -17,7 +17,6 @@ const AboutSection1 = () => {
                   height={400}
                   className="img-fluid"
                 />
-                ˝
               </figure>
             </div>
           </div>

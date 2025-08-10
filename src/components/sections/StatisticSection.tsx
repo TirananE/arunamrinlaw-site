@@ -1,5 +1,7 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
+import { statisticsData } from "@/data";
+import "./StatisticSection.css";
 
 const StatisticSection = () => {
   return (
@@ -8,72 +10,50 @@ const StatisticSection = () => {
         <div className="row">
           <div className="col-12">
             <div className="statistic_content text-center" data-aos="fade-up">
-              <h6>Our Statistics</h6>
-              <h2>Enjoy Your Life With Our Insurance</h2>
+              <h2>Our Services</h2>
             </div>
           </div>
         </div>
+        <div
+          className="col-lg-6 col-md-12 col-sm-12 col-12 text-lg-left text-center"
+          style={{
+            marginBottom: "24px",
+            alignItems: "center",
+            width: "100%",
+          }}
+        >
+          <div className="about_wrapper position-relative" data-aos="zoom-in">
+            <figure className="about-image mb-0">
+              <Image
+                src="/assets/images/services/25680723-IMG_9317.jpg"
+                alt="about"
+                width={600}
+                height={400}
+                className="img-fluid border-radius-30"
+              />
+            </figure>
+          </div>
+        </div>
         <div className="row" data-aos="fade-up">
-          <div className="col-lg-3 col-md-3 col-sm-6 col-6 mx-auto">
-            <div className="statistic-box">
-              <figure className="icon">
-                <Image 
-                  src="/assets/images/statistic-icon1.png" 
-                  alt="statistic" 
-                  width={60}
-                  height={60}
-                  className="img-fluid"
-                />
-              </figure>
-              <span className="value"><span className="number counter">95</span>+</span>
-              <span className="text">Awards Win</span>
+          {statisticsData.map((stat, index) => (
+            <div key={index} className="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
+              <div className="statistic-box h-100 d-flex flex-column justify-content-center">
+                <figure className={`icon ${stat.iconClassName || ""}`}>
+                  <Image
+                    src={stat.icon}
+                    alt="statistic"
+                    width={60}
+                    height={60}
+                    className="img-fluid"
+                  />
+                </figure>
+                <span className="value">
+                  <h3>{stat.value}</h3>
+                </span>
+                <span className="text">{stat.text}</span>
+              </div>
             </div>
-          </div>
-          <div className="col-lg-3 col-md-3 col-sm-6 col-6 mx-auto">
-            <div className="statistic-box">
-              <figure className="icon">
-                <Image 
-                  src="/assets/images/statistic-icon2.png" 
-                  alt="statistic" 
-                  width={60}
-                  height={60}
-                  className="img-fluid"
-                />
-              </figure>
-              <span className="value"><span className="number counter">100</span>%</span>
-              <span className="text">Satisified Clients</span>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-3 col-sm-6 col-6 mx-auto">
-            <div className="statistic-box">
-              <figure className="icon">
-                <Image 
-                  src="/assets/images/statistic-icon3.png" 
-                  alt="statistic" 
-                  width={60}
-                  height={60}
-                  className="img-fluid"
-                />
-              </figure>
-              <span className="value"><span className="number counter">320</span>+</span>
-              <span className="text">Insurance Polices</span>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-3 col-sm-6 col-6 mx-auto">
-            <div className="statistic-box">
-              <figure className="icon icon4">
-                <Image 
-                  src="/assets/images/statistic-icon4.png" 
-                  alt="statistic" 
-                  width={60}
-                  height={60}
-                  className="img-fluid"
-                />
-              </figure>
-              <span className="value"><span className="number counter">150</span>+</span>
-              <span className="text">Employees Working</span>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

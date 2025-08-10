@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import "./NavBar.css";
+import { navigationData } from '@/data';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,17 +41,7 @@ const NavBar = () => {
     }
   };
 
-  const navItems = [
-    { id: "banner", label: "Home" },
-    { id: "feature", label: "Features" },
-    { id: "about", label: "About" },
-    { id: "statistic", label: "Statistics" },
-    { id: "type", label: "Services" },
-    { id: "team", label: "Team" },
-    { id: "testimonial", label: "Testimonials" },
-    { id: "insurance", label: "Insurance" },
-    { id: "partner", label: "Partners" },
-  ];
+
 
   return (
     <nav className="navbar">
@@ -72,7 +63,7 @@ const NavBar = () => {
         </button>
 
         <div className={`navbar-menu ${isOpen ? "active" : ""}`}>
-          {navItems.map((item) => (
+          {navigationData.map((item) => (
             <button
               key={item.id}
               className={`navbar-item ${

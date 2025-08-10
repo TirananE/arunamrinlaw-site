@@ -19,11 +19,11 @@ export default function Home() {
       <AboutSection1 />
       <AboutSection2 />
       <StatisticSection />
-      <TypeSection />
+      {/* <TypeSection /> */}
       <TeamSection />
-      <TestimonialSection />
-      <InsuranceSection />
-      <PartnerSection />
+      {/* <TestimonialSection /> */}
+      {/* <InsuranceSection /> */}
+      {/* <PartnerSection /> */}
       <FooterSection />
     </main>
   );

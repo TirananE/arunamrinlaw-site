@@ -4,6 +4,7 @@ import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import TeamCard from "../TeamCard";
+import { teamMembersData } from '@/data';
 
 const customArrowStyles = `
 .splide__pagination {
@@ -82,54 +83,7 @@ const customArrowStyles = `
   }
 `;
 
-// Team member data
-const teamMembers = [
-  {
-    name: "Suwat Apaipakdi",
-    position: "Chairman, Attorney",
-    imageUrl: "/assets/images/members/Suwat.jpg",
-  },
-  {
-    name: "Atchara Saengkhao",
-    position: "Attorney",
-    imageUrl: "/assets/images/members/Atchara.jpg",
-  },
-  {
-    name: "Atichart Saengkhao",
-    position: "Attorney",
-    imageUrl: "/assets/images/members/Atichart.jpg",
-  },
-  {
-    name: "Wilaiporn Kaewmool",
-    position: "Attorney",
-    imageUrl: "/assets/images/members/Wilaiporn.jpg",
-  },
-  {
-    name: "Thitikarn Wichianbut",
-    position: "Attorney",
-    imageUrl: "/assets/images/members/Thitikarn.jpg",
-  },
-  {
-    name: "Sasathorn Thongchai",
-    position: "Attorney",
-    imageUrl: "/assets/images/members/Sasathorn.jpg",
-  },
-  {
-    name: "Nareewat Apaipakdi",
-    position: "International client representative",
-    imageUrl: "/assets/images/members/Nareewat.jpg",
-  },
-  {
-    name: "Nareeporn Apaipakdi",
-    position: "International client representative",
-    imageUrl: "/assets/images/members/Nareeporn.jpg",
-  },
-  {
-    name: "Supisara Angthong",
-    position: "International client representative",
-    imageUrl: "/assets/images/members/Supisara.jpg",
-  },
-];
+
 
 const TeamSection = () => {
   return (
@@ -169,13 +123,12 @@ const TeamSection = () => {
               }}
               aria-label="Team Members Carousel"
             >
-              {teamMembers.map((member, index) => (
+              {teamMembersData.map((member, index) => (
                 <SplideSlide key={index}>
                   <TeamCard
                     name={member.name}
                     position={member.position}
                     imageUrl={member.imageUrl}
-                    // socialLinks={member.socialLinks}
                   />
                 </SplideSlide>
               ))}
