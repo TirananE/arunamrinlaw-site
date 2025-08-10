@@ -1,8 +1,8 @@
-'use client'
-import React, { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { useLanguage } from '../LanguageProvider';
+"use client";
+import React, { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { useLanguage } from "../LanguageProvider";
 
 const FooterSection = () => {
   const { t } = useLanguage();
@@ -20,36 +20,27 @@ const FooterSection = () => {
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12 col-12">
                   <div className="logo-content">
-                    <h3 className="text-white text-4xl font-bold">Arunamrinlaw</h3>
-                    {/* <Link href="/" className="footer-logo">
-                      <figure className="mb-0">
-                      
-                        <Image 
-                          src="/assets/images/footer-logo.png" 
-                          alt="logo" 
-                          width={200}
-                          height={60}
-                        />
-                      </figure>
-                    </Link> */}
+                    <h3 className="text-white text-4xl font-bold">
+                      Arunamrinlaw
+                    </h3>
                     <p className="text-size-14 mb-0">
-                      {t('professional_services')}
+                      {t("professional_services")}
                     </p>
                     <div className="mt-3">
-                      <button 
+                      <button
                         onClick={openModal}
                         className="btn btn-primary book-consultation-btn"
                         style={{
-                          backgroundColor: '#8B7355',
-                          border: 'none',
-                          padding: '10px 20px',
-                          borderRadius: '5px',
-                          color: 'white',
-                          fontWeight: 'bold',
-                          cursor: 'pointer'
+                          backgroundColor: "#8B7355",
+                          border: "none",
+                          padding: "10px 20px",
+                          borderRadius: "5px",
+                          color: "white",
+                          fontWeight: "bold",
+                          cursor: "pointer",
                         }}
                       >
-                        {t('book_consultation')}
+                        {t("book_consultation")}
                       </button>
                     </div>
                   </div>
@@ -57,63 +48,83 @@ const FooterSection = () => {
 
                 <div className="col-lg-6 col-md-6 col-sm-12 col-12">
                   <div className="contact">
-                    <h4 className="heading">{t('contact_info')}</h4>
+                    <h4 className="heading">{t("contact_info")}</h4>
                     <ul className="list-unstyled mb-0">
                       <li className="text">
                         <i className="fa-solid fa-phone"></i>
-                        <a href="tel:+6625130130" className="text-decoration-none">{t('call')}: 02-513-0130-4</a>
+                        <a
+                          href="tel:+6625130130"
+                          className="text-decoration-none"
+                        >
+                          {t("call")}: 02-513-0130-4
+                        </a>
                       </li>
                       <li className="text">
                         <i className="fa-solid fa-mobile-alt"></i>
-                        <a href="tel:+66843784434" className="text-decoration-none">{t('mobile_phone')}: 084-378-4434</a>
+                        <a
+                          href="tel:+66843784434"
+                          className="text-decoration-none"
+                        >
+                          {t("mobile_phone")}: 084-378-4434
+                        </a>
                       </li>
                       <li className="text">
                         <i className="fa-solid fa-envelope"></i>
-                        <a href="mailto:arunamrin.law@gmail.com" className="text-decoration-none">arunamrin.law@gmail.com</a>
+                        <a
+                          href="mailto:arunamrin.law@gmail.com"
+                          className="text-decoration-none"
+                        >
+                          arunamrin.law@gmail.com
+                        </a>
                       </li>
                       <li className="text">
                         <i className="fa-solid fa-location-dot"></i>
-                        <p className="address mb-0">109/12, SOI LAT PHRAO 23, LAT PHRAO, CHANKASEM, CHATUCHAK, BANGKOK 10900</p>
+                        <p className="address mb-0">
+                          109/12, SOI LAT PHRAO 23, LAT PHRAO, CHANKASEM,
+                          CHATUCHAK, BANGKOK 10900
+                        </p>
                       </li>
                     </ul>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className="copyright">
-        <p className="mb-0">{t('copyright')}</p>
+        <p className="mb-0">{t("copyright")}</p>
       </div>
 
       {/* Modal */}
       {isModalOpen && (
-        <div 
-          className="modal fade show" 
-          style={{ 
-            display: 'block', 
-            backgroundColor: 'rgba(0,0,0,0.5)',
-            position: 'fixed',
+        <div
+          className="modal fade show"
+          style={{
+            display: "block",
+            backgroundColor: "rgba(0,0,0,0.5)",
+            position: "fixed",
             top: 0,
             left: 0,
-            width: '100%',
-            height: '100%',
-            zIndex: 1050
+            width: "100%",
+            height: "100%",
+            zIndex: 1050,
           }}
           onClick={closeModal}
         >
-          <div 
+          <div
             className="modal-dialog modal-dialog-centered modal-lg"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="modal-content">
-              <div className="modal-header" style={{ backgroundColor: '#1a1f3e', color: 'white' }}>
-                <h5 className="modal-title">{t('contact_us')}</h5>
-                <button 
-                  type="button" 
-                  className="btn-close btn-close-white" 
+              <div
+                className="modal-header"
+                style={{ backgroundColor: "#1a1f3e", color: "white" }}
+              >
+                <h5 className="modal-title">{t("contact_us")}</h5>
+                <button
+                  type="button"
+                  className="btn-close btn-close-white"
                   onClick={closeModal}
                   aria-label="Close"
                 ></button>
@@ -126,26 +137,50 @@ const FooterSection = () => {
                       alt="Office Location"
                       width={400}
                       height={300}
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
                     />
                   </div>
-                  <div className="col-md-7 p-4" style={{ backgroundColor: '#1a1f3e', color: 'white' }}>
-                    <h4 style={{ color: '#D4AF37', marginBottom: '20px' }}>{t('contact_us')}</h4>
+                  <div
+                    className="col-md-7 p-4"
+                    style={{ backgroundColor: "#1a1f3e", color: "white" }}
+                  >
+                    <h4 style={{ color: "#D4AF37", marginBottom: "20px" }}>
+                      {t("contact_us")}
+                    </h4>
                     <div className="contact-info">
                       <div className="mb-3">
-                        <i className="fa-solid fa-location-dot me-2" style={{ color: '#D4AF37' }}></i>
-                        <span>109/12, SOI LAT PHRAO 23, LAT PHRAO, CHANKASEM, CHATUCHAK, BANGKOK 10900</span>
+                        <i
+                          className="fa-solid fa-location-dot me-2"
+                          style={{ color: "#D4AF37" }}
+                        ></i>
+                        <span>
+                          109/12, SOI LAT PHRAO 23, LAT PHRAO, CHANKASEM,
+                          CHATUCHAK, BANGKOK 10900
+                        </span>
                       </div>
                       <div className="mb-3">
-                        <i className="fa-solid fa-phone me-2" style={{ color: '#D4AF37' }}></i>
-                        <span>{t('call')}: 02-513-0130-4</span>
+                        <i
+                          className="fa-solid fa-phone me-2"
+                          style={{ color: "#D4AF37" }}
+                        ></i>
+                        <span>{t("call")}: 02-513-0130-4</span>
                       </div>
                       <div className="mb-3">
-                        <i className="fa-solid fa-mobile-alt me-2" style={{ color: '#D4AF37' }}></i>
-                        <span>{t('mobile_phone')}: 084-378-4434</span>
+                        <i
+                          className="fa-solid fa-mobile-alt me-2"
+                          style={{ color: "#D4AF37" }}
+                        ></i>
+                        <span>{t("mobile_phone")}: 084-378-4434</span>
                       </div>
                       <div className="mb-3">
-                        <i className="fa-solid fa-envelope me-2" style={{ color: '#D4AF37' }}></i>
+                        <i
+                          className="fa-solid fa-envelope me-2"
+                          style={{ color: "#D4AF37" }}
+                        ></i>
                         <span>arunamrin.law@gmail.com</span>
                       </div>
                     </div>

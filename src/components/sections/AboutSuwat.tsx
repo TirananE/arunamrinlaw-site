@@ -24,11 +24,11 @@ const AboutSuwat = () => {
 
   const achievements = [
     "Serves the position as chairman of Arunamarin Law Co. Ltd.",
-    "One of the initial members of the first graduating class from Ramkumhang Law School.",
-    "Association Secretary of Ramkumhang Law School.",
+    "One of the initial members of the first graduating class from Ramkhamhaeng Law School.",
+    "Association Secretary of Ramkhamhaeng Law School.",
     "Deputy Secretary General at the Thai's Lawyer Council.",
-    "Master's degree in Public Administration from Ramkumhang University.",
-    "Master of Arts in Political Science from Ramkumhang University.",
+    "Master's degree in Public Administration from Ramkhamhaeng University.",
+    "Master of Arts in Political Science from Ramkhamhaeng University.",
     "Legal consultant for Deputy Ministry of Transport, Deputy Minister of Interior, and Minister of Commerce.",
     "Legal consultant for Bangkok University.",
     "Ex Honorary Adviser for the study committee for anti-corruption and good governance.",

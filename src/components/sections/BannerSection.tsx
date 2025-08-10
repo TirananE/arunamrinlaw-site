@@ -14,9 +14,9 @@ const BannerSection = () => {
           <div className="row align-items-center">
             <div className="col-lg-7 col-md-12 col-sm-12 col-12">
               <div className="banner_content" data-aos="fade-up">
-                <h1>
+                <h2>
                   {t('banner_title')}
-                </h1>
+                </h2>
                 <p className="text-size-18">
                   {t('banner_description')}
                 </p>
