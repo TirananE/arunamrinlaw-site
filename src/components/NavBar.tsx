@@ -3,10 +3,13 @@
 import React, { useState, useEffect } from "react";
 import "./NavBar.css";
 import { navigationData } from '@/data';
+import LanguageSwitcher from './LanguageSwitcher';
+import { useLanguage } from './LanguageProvider';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -71,9 +74,12 @@ const NavBar = () => {
               }`}
               onClick={() => scrollToSection(item.id)}
             >
-              {item.label}
+              {t(item.label.toLowerCase())}
             </button>
           ))}
+          <div className="navbar-item language-switcher-item">
+            <LanguageSwitcher />
+          </div>
         </div>
       </div>
     </nav>

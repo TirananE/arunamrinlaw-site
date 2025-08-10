@@ -114,6 +114,14 @@
   color: var(--e-global-color-accent);
 }
 
+.language-switcher-item {
+  margin-left: 1rem;
+}
+
+.language-switcher-item::after {
+  display: none !important;
+}
+
 @media (max-width: 768px) {
   .navbar {
     padding: 0.5rem 0;
@@ -179,5 +187,11 @@
 
   .navbar-logo {
     height: 40px;
+  }
+
+  .language-switcher-item {
+    margin-left: 0;
+    margin-top: 1rem;
+    padding: 1rem;
   }
 }

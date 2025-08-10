@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Script from "next/script";
 import Preloader from "@/components/Preloader";
 import NavBar from "@/components/NavBar";
+import { LanguageProvider } from "@/components/LanguageProvider";
 import "./globals.css";
 
 const inter = Inter({
@@ -12,8 +13,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Aruna Mrinlaw - Law Firm",
-  description: "Professional law firm services",
+  title: "Aruna Mrinlaw - Law Firm | สำนักงานกฎหมายอรุณมรินทร์",
+  description: "Professional law firm services | บริการทางกฎหมายมืออาชีพ",
 };
 
 export default function RootLayout({
@@ -33,9 +34,11 @@ export default function RootLayout({
         <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
       </head>
       <body className={inter.variable}>
-        <Preloader />
-        <NavBar />
-        {children}
+        <LanguageProvider>
+          <Preloader />
+          <NavBar />
+          {children}
+        </LanguageProvider>
         
         {/* Scripts */}
         <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" strategy="beforeInteractive" />

@@ -1,8 +1,13 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useLanguage } from '../LanguageProvider';
 
 const BannerSection = () => {
+  const { t } = useLanguage();
+  
   return (
     <div className="travel_banner_outer position-relative">
       <section id="banner" className="travelbanner-con position-relative">
@@ -10,17 +15,13 @@ const BannerSection = () => {
           <div className="row align-items-center">
             <div className="col-lg-7 col-md-12 col-sm-12 col-12">
               <div className="banner_content" data-aos="fade-up">
-                {/* <h5>We Don’t Just Practice Law — We Define It.</h5> */}
                 <h1>
-                  A well-respected Thai law firm with 50 years of experience.
+                  {t('banner_title')}
                 </h1>
                 <p className="text-size-18">
-                  One of the most trusted and respected law firms in the
-                  industry. Known for our unwavering commitment to excellence,
-                  we combine deep legal expertise with strategic thinking to
-                  deliver results that exceed expectations.
+                  {t('banner_description')}
                 </p>
-                <h5>We Don’t Just Practice Law — We Define It.</h5>
+                <h5>{t('banner_tagline')}</h5>
               </div>
             </div>
             <div className="col-lg-5 col-md-12 col-sm-12 col-12 text-lg-left text-center">
