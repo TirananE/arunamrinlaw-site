@@ -27,10 +27,10 @@ const BannerSection = () => {
               <div className="banner_wrapper" data-aos="zoom-in">
                 <figure className="banner-image mb-0">
                   <Image
-                    src="/assets/images/home/25680723-IMG_9271.jpg"
+                    src="/assets/images/home/25680723-IMG_9323.jpg"
                     alt="banner"
-                    width={300}
-                    height={200}
+                    width={1000}
+                    height={1000}
                     className="img-fluid"
                   />
                 </figure>
