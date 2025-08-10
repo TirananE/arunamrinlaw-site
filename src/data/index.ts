@@ -1,8 +1,9 @@
 // Centralized data structures for reusable components
+import React from 'react';
 
 // Translation key interfaces
 export interface StatisticItemWithKeys {
-  icon: string;
+  icon: string | React.ReactNode;
   valueKey: string;
   textKey: string;
   iconClassName?: string;
@@ -46,37 +47,34 @@ export interface NavItem {
 // Statistics data with translation keys
 export const statisticsDataKeys: StatisticItemWithKeys[] = [
   {
-    icon: "/assets/images/statistic-icon1.png",
+    icon: "wrench", // Icon identifier instead of JSX
     valueKey: "civil_law",
     textKey: "civil_law_desc",
   },
   {
-    icon: "/assets/images/statistic-icon2.png",
+    icon: "handshake",
     valueKey: "commercial_law",
     textKey: "commercial_law_desc",
   },
   {
-    icon: "/assets/images/statistic-icon3.png",
+    icon: "briefcase",
     valueKey: "business_commercial_law",
     textKey: "business_commercial_law_desc",
   },
   {
-    icon: "/assets/images/statistic-icon4.png",
+    icon: "home",
     valueKey: "property_investment_law",
     textKey: "property_investment_law_desc",
-    iconClassName: "icon4",
   },
   {
-    icon: "/assets/images/statistic-icon4.png",
+    icon: "users",
     valueKey: "family_law",
     textKey: "family_law_desc",
-    iconClassName: "icon4",
   },
   {
-    icon: "/assets/images/statistic-icon4.png",
+    icon: "shield-check",
     valueKey: "corporate_compliance",
     textKey: "corporate_compliance_desc",
-    iconClassName: "icon4",
   },
 ];
 

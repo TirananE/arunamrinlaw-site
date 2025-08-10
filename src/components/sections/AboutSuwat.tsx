@@ -82,7 +82,7 @@ const AboutSuwat = () => {
                           width={350}
                           height={350}
                           className="img-fluid"
-                          style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                          style={{ objectFit: "fill", width: "100%", height: "100%" }}
                         />
                       </figure>
                     </SwiperSlide>

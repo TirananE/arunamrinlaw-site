@@ -5,6 +5,41 @@ import Image from "next/image";
 import { statisticsDataKeys } from "@/data";
 import { useLanguage } from '../LanguageProvider';
 import "./StatisticSection.css";
+import { Camera, Wrench, Handshake, Briefcase, Home, Users, ShieldCheck } from "lucide-react";
+
+// Icon mapping function
+const getIconComponent = (iconIdentifier: string | React.ReactNode) => {
+  if (typeof iconIdentifier === 'string') {
+    // Check if it's an icon identifier or image path
+    if (iconIdentifier.includes('/') || iconIdentifier.includes('.')) {
+      // It's an image path
+      return null;
+    }
+    
+    // It's an icon identifier - map to actual icon component
+    switch (iconIdentifier) {
+      case 'wrench':
+        return <Wrench size={60} className="text-primary" color="#0f122b" />;
+      case 'camera':
+        return <Camera size={60} className="text-primary" color="#0f122b" />;
+      case 'handshake':
+        return <Handshake size={60} className="text-primary" color="#0f122b" />;
+      case 'briefcase':
+        return <Briefcase size={60} className="text-primary" color="#0f122b" />;
+      case 'home':
+        return <Home size={60} className="text-primary" color="#0f122b" />;
+      case 'users':
+        return <Users size={60} className="text-primary" color="#0f122b" />;
+      case 'shield-check':
+        return <ShieldCheck size={60} className="text-primary" color="#0f122b" />;
+      default:
+        return null;
+    }
+  }
+  
+  // It's already a React component
+  return iconIdentifier;
+};
 
 const StatisticSection = () => {
   const { t } = useLanguage();
@@ -43,13 +78,23 @@ const StatisticSection = () => {
             <div key={index} className="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
               <div className="statistic-box h-100 d-flex flex-column justify-content-center">
                 <figure className={`icon ${stat.iconClassName || ""}`}>
-                  <Image
-                    src={stat.icon}
-                    alt="statistic"
-                    width={60}
-                    height={60}
-                    className="img-fluid"
-                  />
+                  {(() => {
+                    const iconComponent = getIconComponent(stat.icon);
+                    if (iconComponent) {
+                      return iconComponent;
+                    } else {
+                      // Render as image if it's a path or no icon component found
+                      return (
+                        <Image
+                          src={stat.icon as string}
+                          alt="statistic"
+                          width={60}
+                          height={60}
+                          className="img-fluid"
+                        />
+                      );
+                    }
+                  })()}
                 </figure>
                 <span className="value">
                   <h3>{t(stat.valueKey)}</h3>

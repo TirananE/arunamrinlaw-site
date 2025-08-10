@@ -31,39 +31,6 @@ const AboutSection1 = () => {
               <p className="text-white text text-size-16">
                 {t('commitment_description')}
               </p>
-              {/* <div className="propertise">
-                <ul className="list-unstyled mb-0 list1">
-                  <li>
-                    <i className="fa fa-check" aria-hidden="true"></i>
-                    <p className="mb-0 text-size-18">Excepteur sint occae</p>
-                  </li>
-                  <li>
-                    <i className="fa fa-check" aria-hidden="true"></i>
-                    <p className="mb-0 text-size-18">Duis aute irure dolor</p>
-                  </li>
-                  <li>
-                    <i className="fa fa-check" aria-hidden="true"></i>
-                    <p className="mb-0 text-size-18">Rerum hic tenetur sai</p>
-                  </li>
-                </ul>
-                <ul className="list-unstyled mb-0 list2">
-                  <li>
-                    <i className="fa fa-check" aria-hidden="true"></i>
-                    <p className="mb-0 text-size-18">Quo voluptas nullaiur</p>
-                  </li>
-                  <li>
-                    <i className="fa fa-check" aria-hidden="true"></i>
-                    <p className="mb-0 text-size-18">Consectetur adiriscive</p>
-                  </li>
-                  <li>
-                    <i className="fa fa-check" aria-hidden="true"></i>
-                    <p className="mb-0 text-size-18">Suscirit laboriosamer</p>
-                  </li>
-                </ul>
-              </div> */}
-              {/* <Link href="/about" className="text-decoration-none all_button">
-                Read More<i className="fa-solid fa-arrow-right"></i>
-              </Link> */}
             </div>
           </div>
         </div>

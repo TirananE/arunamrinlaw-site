@@ -181,7 +181,7 @@
 
   .navbar-item:hover,
   .navbar-item.active {
-    background-color: rgba(255, 76, 59, 0.1);
+    background-color: #f5fefc;
     color: var(--e-global-color-accent);
   }
 

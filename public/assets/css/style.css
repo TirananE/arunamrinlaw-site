@@ -1195,7 +1195,8 @@ html{
 /* Footer */
 
 .footer-con{
-    background-color: var(--e-global-color-very-dark-mostly-black-blue);
+    /* background-color: var(--e-global-color-very-dark-mostly-black-blue); */
+    background-color: #0f122b;
 }
 .footer-con .middle_portion{
     padding: 90px 0 75px;
@@ -1254,7 +1255,7 @@ html{
     position: relative;
     margin-bottom: 16px;
     padding-left: 32px;
-    display: inline-block;
+    /* display: inline-block; */
 }
 .footer-con .middle_portion .contact a,
 .footer-con .middle_portion .contact p {
@@ -2646,8 +2647,9 @@ html{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(../images/about3-backgroundimage.jpg);
-    background-color: var(--e-global-color-dark-moderate-blue);
+    /* background-image: url(../images/about3-backgroundimage.jpg);
+    background-color: var(--e-global-color-dark-moderate-blue); */
+    background-color: #0f122b;
 }
 .travelabout-con .about_wrapper .about-image {
     position: relative;
