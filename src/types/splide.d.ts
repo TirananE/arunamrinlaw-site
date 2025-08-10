@@ -11,24 +11,24 @@ declare module '@splidejs/react-splide' {
     pauseOnHover?: boolean;
     resetProgress?: boolean;
     breakpoints?: Record<number, Partial<SplideOptions>>;
-    [key: string]: any;
+    [key: string]: unknown;
   }
   
   export interface SplideProps {
     options?: SplideOptions;
     'aria-label'?: string;
     children?: ReactNode;
-    [key: string]: any;
+    [key: string]: unknown;
   }
   
   export interface SplideSlideProps {
     children?: ReactNode;
-    [key: string]: any;
+    [key: string]: unknown;
   }
   
   export const Splide: ComponentType<SplideProps>;
   export const SplideSlide: ComponentType<SplideSlideProps>;
-  export const SplideTrack: ComponentType<{children?: ReactNode; [key: string]: any}>;
+  export const SplideTrack: ComponentType<{children?: ReactNode; [key: string]: unknown}>;
 }
 
 declare module '@splidejs/react-splide/css';

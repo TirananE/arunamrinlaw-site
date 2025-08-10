@@ -1,6 +1,7 @@
-"use client"
+"use client";
 
-import React, { useEffect } from 'react';
+import React from 'react';
+import { useLanguage } from '../LanguageProvider';
 import Image from 'next/image';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -12,14 +13,15 @@ import 'swiper/css/pagination';
 import './TestimonialSection.css';
 
 const TestimonialSection = () => {
+  const { t } = useLanguage();
   return (
     <section id="testimonial" className="hometestimonial-con traveltestimonial-con position-relative">
       <div className="container">
         <div className="row">
           <div className="col-12">
             <div className="testimonial_content text-center" data-aos="fade-up">
-              <h6>Testimonials</h6>
-              <h2>What Our Clients are Saying</h2>
+              <h6>{t('testimonials')}</h6>
+              <h2>{t('what_clients_saying')}</h2>
             </div>
           </div>
         </div>

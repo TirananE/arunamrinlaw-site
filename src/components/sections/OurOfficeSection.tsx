@@ -2,8 +2,10 @@
 
 import React from "react";
 import Image from "next/image";
+import { useLanguage } from '../LanguageProvider';
 
 const OurOfficeSection = () => {
+  const { t } = useLanguage();
   const allOfficeImages = [
     "/assets/images/office_and_location/25680723-IMG_9309.jpg",
     "/assets/images/office_and_location/25680723-IMG_9317.jpg", 
@@ -39,7 +41,7 @@ const OurOfficeSection = () => {
         <div className="row">
           <div className="col-12">
             <div className="office_content text-center" data-aos="fade-up">
-              <h2>Our Office</h2>
+              <h2>{t('our_office')}</h2>
             </div>
           </div>
         </div>

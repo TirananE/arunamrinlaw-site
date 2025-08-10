@@ -1,16 +1,20 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
-import { statisticsData } from "@/data";
+import { statisticsDataKeys } from "@/data";
+import { useLanguage } from '../LanguageProvider';
 import "./StatisticSection.css";
 
 const StatisticSection = () => {
+  const { t } = useLanguage();
   return (
     <section id="statistic" className="statistic-con position-relative">
       <div className="container">
         <div className="row">
           <div className="col-12">
             <div className="statistic_content text-center" data-aos="fade-up">
-              <h2>Our Services</h2>
+              <h2>{t('our_services')}</h2>
             </div>
           </div>
         </div>
@@ -35,7 +39,7 @@ const StatisticSection = () => {
           </div>
         </div>
         <div className="row" data-aos="fade-up">
-          {statisticsData.map((stat, index) => (
+          {statisticsDataKeys.map((stat, index) => (
             <div key={index} className="col-lg-4 col-md-6 col-sm-6 col-6 mb-4">
               <div className="statistic-box h-100 d-flex flex-column justify-content-center">
                 <figure className={`icon ${stat.iconClassName || ""}`}>
@@ -48,9 +52,9 @@ const StatisticSection = () => {
                   />
                 </figure>
                 <span className="value">
-                  <h3>{stat.value}</h3>
+                  <h3>{t(stat.valueKey)}</h3>
                 </span>
-                <span className="text">{stat.text}</span>
+                <span className="text">{t(stat.textKey)}</span>
               </div>
             </div>
           ))}

@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         inter: ['var(--font-inter)', 'sans-serif'],
+        'ibm-plex-thai': ['var(--font-ibm-plex-thai)', 'sans-serif'],
       },
     },
   },

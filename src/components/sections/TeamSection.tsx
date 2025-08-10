@@ -4,7 +4,8 @@ import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import TeamCard from "../TeamCard";
-import { teamMembersData } from '@/data';
+import { teamMembersDataKeys } from '@/data';
+import { useLanguage } from '../LanguageProvider';
 
 const customArrowStyles = `
 .splide__pagination {
@@ -86,6 +87,7 @@ const customArrowStyles = `
 
 
 const TeamSection = () => {
+  const { t } = useLanguage();
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: customArrowStyles }} />
@@ -94,7 +96,7 @@ const TeamSection = () => {
           <div className="row">
             <div className="col-12">
               <div className="team_content text-center" data-aos="fade-up">
-                <h2>Our members</h2>
+                <h2>{t('our_members')}</h2>
               </div>
             </div>
           </div>
@@ -123,11 +125,11 @@ const TeamSection = () => {
               }}
               aria-label="Team Members Carousel"
             >
-              {teamMembersData.map((member, index) => (
+              {teamMembersDataKeys.map((member, index) => (
                 <SplideSlide key={index}>
                   <TeamCard
                     name={member.name}
-                    position={member.position}
+                    position={t(member.positionKey)}
                     imageUrl={member.imageUrl}
                   />
                 </SplideSlide>

@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, IBM_Plex_Sans_Thai_Looped } from "next/font/google";
 import Script from "next/script";
 import Preloader from "@/components/Preloader";
 import NavBar from "@/components/NavBar";
 import { LanguageProvider } from "@/components/LanguageProvider";
+import { FontProvider } from "@/components/FontProvider";
 import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
+});
+
+const ibmPlexSansThaiLooped = IBM_Plex_Sans_Thai_Looped({
+  subsets: ["thai"],
+  weight: ["400", "500", "700"],
+  display: "swap",
+  variable: "--font-ibm-plex-thai",
 });
 
 export const metadata: Metadata = {
@@ -33,11 +41,16 @@ export default function RootLayout({
         <link rel="stylesheet" href="/assets/css/aos.css" />
         <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
       </head>
-      <body className={inter.variable}>
+      <body className={`${inter.variable} ${ibmPlexSansThaiLooped.variable}`}>
         <LanguageProvider>
-          <Preloader />
-          <NavBar />
-          {children}
+          <FontProvider 
+            interClassName={inter.className}
+            thaiClassName={ibmPlexSansThaiLooped.className}
+          >
+            <Preloader />
+            <NavBar />
+            {children}
+          </FontProvider>
         </LanguageProvider>
         
         {/* Scripts */}

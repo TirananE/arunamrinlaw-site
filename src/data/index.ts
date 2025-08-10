@@ -1,5 +1,24 @@
 // Centralized data structures for reusable components
 
+// Translation key interfaces
+export interface StatisticItemWithKeys {
+  icon: string;
+  valueKey: string;
+  textKey: string;
+  iconClassName?: string;
+}
+
+export interface TeamMemberWithKeys {
+  name: string;
+  positionKey: string;
+  imageUrl: string;
+}
+
+export interface ServiceItemWithKeys {
+  titleKey: string;
+  descriptionKey: string;
+}
+
 export interface StatisticItem {
   icon: string;
   value: string;
@@ -24,7 +43,44 @@ export interface NavItem {
   label: string;
 }
 
-// Statistics data
+// Statistics data with translation keys
+export const statisticsDataKeys: StatisticItemWithKeys[] = [
+  {
+    icon: "/assets/images/statistic-icon1.png",
+    valueKey: "civil_law",
+    textKey: "civil_law_desc",
+  },
+  {
+    icon: "/assets/images/statistic-icon2.png",
+    valueKey: "commercial_law",
+    textKey: "commercial_law_desc",
+  },
+  {
+    icon: "/assets/images/statistic-icon3.png",
+    valueKey: "business_commercial_law",
+    textKey: "business_commercial_law_desc",
+  },
+  {
+    icon: "/assets/images/statistic-icon4.png",
+    valueKey: "property_investment_law",
+    textKey: "property_investment_law_desc",
+    iconClassName: "icon4",
+  },
+  {
+    icon: "/assets/images/statistic-icon4.png",
+    valueKey: "family_law",
+    textKey: "family_law_desc",
+    iconClassName: "icon4",
+  },
+  {
+    icon: "/assets/images/statistic-icon4.png",
+    valueKey: "corporate_compliance",
+    textKey: "corporate_compliance_desc",
+    iconClassName: "icon4",
+  },
+];
+
+// Backward compatibility - deprecated, use statisticsDataKeys instead
 export const statisticsData: StatisticItem[] = [
   {
     icon: "/assets/images/statistic-icon1.png",
@@ -61,7 +117,56 @@ export const statisticsData: StatisticItem[] = [
   },
 ];
 
-// Team members data
+// Team members data with translation keys
+export const teamMembersDataKeys: TeamMemberWithKeys[] = [
+  {
+    name: "Suwat Apaipakdi",
+    positionKey: "chairman_attorney",
+    imageUrl: "/assets/images/members/Suwat.jpg",
+  },
+  {
+    name: "Atchara Saengkhao",
+    positionKey: "attorney",
+    imageUrl: "/assets/images/members/Atchara.jpg",
+  },
+  {
+    name: "Atichart Saengkhao",
+    positionKey: "attorney",
+    imageUrl: "/assets/images/members/Atichart.jpg",
+  },
+  {
+    name: "Wilaiporn Kaewmool",
+    positionKey: "attorney",
+    imageUrl: "/assets/images/members/Wilaiporn.jpg",
+  },
+  {
+    name: "Thitikarn Wichianbut",
+    positionKey: "attorney",
+    imageUrl: "/assets/images/members/Thitikarn.jpg",
+  },
+  {
+    name: "Sasathorn Thongchai",
+    positionKey: "attorney",
+    imageUrl: "/assets/images/members/Sasathorn.jpg",
+  },
+  {
+    name: "Nareewat Apaipakdi",
+    positionKey: "international_client_representative",
+    imageUrl: "/assets/images/members/Nareewat.jpg",
+  },
+  {
+    name: "Nareeporn Apaipakdi",
+    positionKey: "international_client_representative",
+    imageUrl: "/assets/images/members/Nareeporn.jpg",
+  },
+  {
+    name: "Supisara Angthong",
+    positionKey: "international_client_representative",
+    imageUrl: "/assets/images/members/Supisara.jpg",
+  },
+];
+
+// Backward compatibility - deprecated, use teamMembersDataKeys instead
 export const teamMembersData: TeamMember[] = [
   {
     name: "Suwat Apaipakdi",
@@ -110,7 +215,35 @@ export const teamMembersData: TeamMember[] = [
   },
 ];
 
-// Services data
+// Services data with translation keys
+export const servicesDataKeys: ServiceItemWithKeys[] = [
+  {
+    titleKey: "corporate_law",
+    descriptionKey: "corporate_law_desc",
+  },
+  {
+    titleKey: "commercial_contracts",
+    descriptionKey: "commercial_contracts_desc",
+  },
+  {
+    titleKey: "litigation",
+    descriptionKey: "litigation_desc",
+  },
+  {
+    titleKey: "investment_advisory",
+    descriptionKey: "investment_advisory_desc",
+  },
+  {
+    titleKey: "labor_law",
+    descriptionKey: "labor_law_desc",
+  },
+  {
+    titleKey: "intellectual_property",
+    descriptionKey: "intellectual_property_desc",
+  },
+];
+
+// Backward compatibility - deprecated, use servicesDataKeys instead
 export const servicesData: ServiceItem[] = [
   {
     title: "Corporate Law",
@@ -140,10 +273,10 @@ export const servicesData: ServiceItem[] = [
 
 // Navigation items data
 export const navigationData: NavItem[] = [
-  { id: "banner", label: "Home" },
-  { id: "about", label: "About" },
-  { id: "team", label: "Team" },
-  { id: "statistic", label: "Services" },
-  { id: "office", label: "Office" },
-  { id: "contact", label: "Contact" },
+  { id: "banner", label: "home" },
+  { id: "about", label: "about" },
+  { id: "team", label: "team" },
+  { id: "statistic", label: "services" },
+  { id: "office", label: "office" },
+  { id: "contact", label: "contact" },
 ];

@@ -14,7 +14,7 @@ const FaqSection = () => {
           </div>
           <div className="col-lg-6 col-md-12 col-sm-12 col-12">
             <div className="faq_content" data-aos="fade-up">
-              <h6>Faq's</h6>
+              <h6>Faq&apos;s</h6>
               <h2>Frequently Asked Questions</h2>
               <p className="text text-size-16">Duisruam est qui dolorem ipsum quia dolor sit amer adipisci velit, sed nuia non numuam.</p>
               <div className="accordian-section-inner position-relative">
@@ -28,7 +28,7 @@ const FaqSection = () => {
                       </div>
                       <div id="faqcollapseOne" className="collapse" aria-labelledby="faqheadingOne" data-parent="#faq_accordion">
                         <div className="card-body">
-                          <p className="text-size-16 text-left mb-0">Our experienced insurance agents can help you assess your family's
+                          <p className="text-size-16 text-left mb-0">Our experienced insurance agents can help you assess your family&apos;s
                             needs and recommend the appropriate coverage options based on factors such as your family size
                           </p>
                         </div>

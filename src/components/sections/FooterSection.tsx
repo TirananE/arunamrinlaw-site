@@ -2,8 +2,10 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useLanguage } from '../LanguageProvider';
 
 const FooterSection = () => {
+  const { t } = useLanguage();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
@@ -29,7 +31,7 @@ const FooterSection = () => {
                       </figure>
                     </Link>
                     <p className="text-size-14 mb-0">
-                      Professional legal services with expertise in various areas of law.
+                      {t('professional_services')}
                     </p>
                     <div className="mt-3">
                       <button 
@@ -45,7 +47,7 @@ const FooterSection = () => {
                           cursor: 'pointer'
                         }}
                       >
-                        BOOK A CONSULTATION
+                        {t('book_consultation')}
                       </button>
                     </div>
                   </div>
@@ -53,15 +55,15 @@ const FooterSection = () => {
 
                 <div className="col-lg-6 col-md-6 col-sm-12 col-12">
                   <div className="contact">
-                    <h4 className="heading">Contact Info</h4>
+                    <h4 className="heading">{t('contact_info')}</h4>
                     <ul className="list-unstyled mb-0">
                       <li className="text">
                         <i className="fa-solid fa-phone"></i>
-                        <a href="tel:+6625130130" className="text-decoration-none">Call: 02-513-0130-4</a>
+                        <a href="tel:+6625130130" className="text-decoration-none">{t('call')}: 02-513-0130-4</a>
                       </li>
                       <li className="text">
                         <i className="fa-solid fa-mobile-alt"></i>
-                        <a href="tel:+66843784434" className="text-decoration-none">Mobile Phone: 084-378-4434</a>
+                        <a href="tel:+66843784434" className="text-decoration-none">{t('mobile_phone')}: 084-378-4434</a>
                       </li>
                       <li className="text">
                         <i className="fa-solid fa-envelope"></i>
@@ -81,7 +83,7 @@ const FooterSection = () => {
         </div>
       </div>
       <div className="copyright">
-        <p className="mb-0">Copyright 2024, ARUNAMRIN LAW CO.,LTD. All Rights Reserved.</p>
+        <p className="mb-0">{t('copyright')}</p>
       </div>
 
       {/* Modal */}
@@ -106,7 +108,7 @@ const FooterSection = () => {
           >
             <div className="modal-content">
               <div className="modal-header" style={{ backgroundColor: '#1a1f3e', color: 'white' }}>
-                <h5 className="modal-title">Contact Us</h5>
+                <h5 className="modal-title">{t('contact_us')}</h5>
                 <button 
                   type="button" 
                   className="btn-close btn-close-white" 
@@ -126,7 +128,7 @@ const FooterSection = () => {
                     />
                   </div>
                   <div className="col-md-7 p-4" style={{ backgroundColor: '#1a1f3e', color: 'white' }}>
-                    <h4 style={{ color: '#D4AF37', marginBottom: '20px' }}>Contact Us</h4>
+                    <h4 style={{ color: '#D4AF37', marginBottom: '20px' }}>{t('contact_us')}</h4>
                     <div className="contact-info">
                       <div className="mb-3">
                         <i className="fa-solid fa-location-dot me-2" style={{ color: '#D4AF37' }}></i>
@@ -134,11 +136,11 @@ const FooterSection = () => {
                       </div>
                       <div className="mb-3">
                         <i className="fa-solid fa-phone me-2" style={{ color: '#D4AF37' }}></i>
-                        <span>Call: 02-513-0130-4</span>
+                        <span>{t('call')}: 02-513-0130-4</span>
                       </div>
                       <div className="mb-3">
                         <i className="fa-solid fa-mobile-alt me-2" style={{ color: '#D4AF37' }}></i>
-                        <span>Mobile Phone: 084-378-4434</span>
+                        <span>{t('mobile_phone')}: 084-378-4434</span>
                       </div>
                       <div className="mb-3">
                         <i className="fa-solid fa-envelope me-2" style={{ color: '#D4AF37' }}></i>

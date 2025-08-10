@@ -1,15 +1,19 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
+import { useLanguage } from '../LanguageProvider';
 
 const FeatureSection = () => {
+  const { t } = useLanguage();
   return (
     <section id="feature" className="feature-con position-relative">
       <div className="container">
         <div className="row">
           <div className="col-12">
             <div className="feature_content text-center" data-aos="fade-up">
-              <h6>Our Features</h6>
-              <h2>Why We are Better Than Others</h2>
+              <h6>{t('our_features')}</h6>
+              <h2>{t('why_better')}</h2>
             </div>
           </div>
         </div>
@@ -25,8 +29,8 @@ const FeatureSection = () => {
                   className="img-fluid"
                 />
               </figure>
-              <h4>Certified Platform</h4>
-              <p className="text-size-16 mb-0">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore aeu fugiat nulla pariatur.</p>
+              <h4>{t('certified_platform')}</h4>
+              <p className="text-size-16 mb-0">{t('certified_platform_desc')}</p>
             </div>   
           </div>
           <div className="col-lg-4 col-md-4 col-sm-10 col-12 mx-auto">
@@ -40,8 +44,8 @@ const FeatureSection = () => {
                   className="img-fluid"
                 />
               </figure>
-              <h4>24 Hours Service </h4>
-              <p className="text-size-16 mb-0">Nuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore aeu fugiat nulla pariatur.</p>
+              <h4>{t('24_hours_service')}</h4>
+              <p className="text-size-16 mb-0">{t('24_hours_service_desc')}</p>
             </div>    
           </div>
           <div className="col-lg-4 col-md-4 col-sm-10 col-12 mx-auto">
@@ -55,8 +59,8 @@ const FeatureSection = () => {
                   className="img-fluid"
                 />
               </figure>
-              <h4>Complete Solutions</h4>
-              <p className="text-size-16 mb-0">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore aeu fugiat nulla pariatur.</p>
+              <h4>{t('complete_solutions')}</h4>
+              <p className="text-size-16 mb-0">{t('complete_solutions_desc')}</p>
             </div>   
           </div>
         </div>
