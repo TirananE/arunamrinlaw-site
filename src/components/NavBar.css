@@ -19,9 +19,9 @@
 
 .navbar-container {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -120,7 +120,7 @@
   }
 
   .navbar-container {
-    padding: 0 1rem;
+    padding: 0 15px;
     gap: 1rem;
     justify-content: space-between !important;
   }

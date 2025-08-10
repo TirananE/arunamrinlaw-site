@@ -141,12 +141,9 @@ export const servicesData: ServiceItem[] = [
 // Navigation items data
 export const navigationData: NavItem[] = [
   { id: "banner", label: "Home" },
-  { id: "feature", label: "Features" },
   { id: "about", label: "About" },
-  { id: "statistic", label: "Statistics" },
-  { id: "type", label: "Services" },
   { id: "team", label: "Team" },
-  { id: "testimonial", label: "Testimonials" },
-  { id: "insurance", label: "Insurance" },
-  { id: "partner", label: "Partners" },
+  { id: "statistic", label: "Services" },
+  { id: "office", label: "Office" },
+  { id: "contact", label: "Contact" },
 ];
