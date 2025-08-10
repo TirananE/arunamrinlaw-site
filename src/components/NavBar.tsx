@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect } from "react";
 import "./NavBar.css";
-import { navigationData } from '@/data';
-import LanguageSwitcher from './LanguageSwitcher';
-import { useLanguage } from './LanguageProvider';
+import { navigationData } from "@/data";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useLanguage } from "./LanguageProvider";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,17 +44,16 @@ const NavBar = () => {
     }
   };
 
-
-
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-brand">
-          <img
+          Arunamrinlaw
+          {/* <img
             src="/assets/images/logo.png"
             alt="Logo"
             className="navbar-logo"
-          />
+          /> */}
         </div>
         <button
           className={`navbar-toggle ${isOpen ? "active" : ""}`}

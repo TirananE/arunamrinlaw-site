@@ -2548,7 +2548,7 @@ html{
     border-radius: 100%;
     position: absolute;
     z-index: -1;
-    background-color: var(--e-global-color-accent);
+    /* background-color: var(--e-global-color-accent); */
 }
 .travelbanner-con .banner_wrapper .box{
     left: -100px;
@@ -2658,6 +2658,7 @@ html{
     border-radius: 30px;
 }
 .travelabout-con .about_wrapper .about-image::before {
+    display: none;
     content: "";
     top: 40px;
     left: -35px;
@@ -2929,6 +2930,7 @@ html{
 }
 .project_modal .modal.show .modal-dialog {
     transform: translate(0,0);
+    margin: 32px !important;
 }
 .project_modal .modal.fade .modal-dialog {
     transition: transform .3s ease-out,-webkit-transform .3s ease-out;

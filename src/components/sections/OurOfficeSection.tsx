@@ -82,7 +82,7 @@ const OurOfficeSection = () => {
           left: 0;
           right: 0;
           bottom: 0;
-          background: rgba(30, 58, 138, 0.8);
+          background:  #0f122b  ;
           z-index: 1;
         }
 

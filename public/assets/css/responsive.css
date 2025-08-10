@@ -483,6 +483,7 @@
     padding: 100px 0 130px;
   }
   .travelabout-con .about_wrapper .about-image::before {
+    display: none;
     top: 30px;
     left: -30px;
   }
@@ -1360,6 +1361,7 @@
     left: 20px;
   }
   .travelabout-con .about_wrapper .about-image::before {
+    display: none;
     top: 25px;
     left: -25px;
     width: 450px;
@@ -2620,6 +2622,7 @@
     border-radius: 20px;
   }
   .travelabout-con .about_wrapper .about-image::before {
+    display: none;
     top: 20px;
     left: -20px;
     width: 440px;
@@ -3567,6 +3570,7 @@
     height: 395px;
   }
   .travelabout-con .about_wrapper .about-image::before {
+    display: none;
     width: 395px;
     height: 395px;
   }
@@ -4226,6 +4230,7 @@
     height: 300px;
   }
   .travelabout-con .about_wrapper .about-image::before {
+    display: none;
     left: -15px;
     top: 15px;
     width: 300px;

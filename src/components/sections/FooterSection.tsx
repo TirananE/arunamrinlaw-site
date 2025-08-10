@@ -20,8 +20,10 @@ const FooterSection = () => {
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12 col-12">
                   <div className="logo-content">
-                    <Link href="/" className="footer-logo">
+                    <h3 className="text-white text-4xl font-bold">Arunamrinlaw</h3>
+                    {/* <Link href="/" className="footer-logo">
                       <figure className="mb-0">
+                      
                         <Image 
                           src="/assets/images/footer-logo.png" 
                           alt="logo" 
@@ -29,7 +31,7 @@ const FooterSection = () => {
                           height={60}
                         />
                       </figure>
-                    </Link>
+                    </Link> */}
                     <p className="text-size-14 mb-0">
                       {t('professional_services')}
                     </p>
