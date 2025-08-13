@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper core and required modules
@@ -11,6 +12,9 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const AboutSuwat = () => {
+  const { t, i18n } = useTranslation();
+  const isThaiLanguage = i18n.language === 'th';
+
   // Array of founder images (only JPG/JPEG files)
   const founderImages = [
     "/assets/images/founder/25680723-IMG_9329.jpg",
@@ -19,10 +23,19 @@ const AboutSuwat = () => {
     "/assets/images/founder/25680723-IMG_9339.jpg",
     "/assets/images/founder/IMG_2876.JPG",
     "/assets/images/founder/IMG_2894.JPG",
-    "/assets/images/founder/Studio Session-600.jpg",
   ];
 
-  const achievements = [
+  const achievements = isThaiLanguage ? [
+    t('suwat_achievements.1'),
+    t('suwat_achievements.2'), 
+    t('suwat_achievements.3'),
+    t('suwat_achievements.4'),
+    t('suwat_achievements.5'),
+    t('suwat_achievements.6'),
+    t('suwat_achievements.7'),
+    t('suwat_achievements.8'),
+    t('suwat_achievements.9'),
+  ] : [
     "Serves the position as chairman of Arunamarin Law Co. Ltd.",
     "One of the initial members of the first graduating class from Ramkhamhaeng Law School.",
     "Association Secretary of Ramkhamhaeng Law School.",
@@ -79,10 +92,10 @@ const AboutSuwat = () => {
                         <Image
                           src={imageSrc}
                           alt={`Suwat Apaipakdi - Photo ${index + 1}`}
-                          width={350}
+                          width={450}
                           height={350}
-                          className="img-fluid"
-                          style={{ objectFit: "fill", width: "100%", height: "100%" }}
+                          className="img-fluid founder-image"
+                          style={{ objectFit: "cover", width: "100%", height: "100%" }}
                         />
                       </figure>
                     </SwiperSlide>
@@ -93,7 +106,7 @@ const AboutSuwat = () => {
           </div>
           <div className="col-lg-6 col-md-12 col-sm-12 col-12">
             <div className="about_content" data-aos="fade-up">
-              <h2 className="text-white">About Suwat Apaipakdi</h2>
+              <h2 className="">{isThaiLanguage ? t('about_suwat_title') : 'About Suwat Apaipakdi'}</h2>
 
               {/* Achievements List */}
               <div className="achievements-container">
@@ -101,7 +114,7 @@ const AboutSuwat = () => {
                   {achievements.map((achievement, index) => (
                     <li key={index} className="achievement-item">
                       <i className="fa fa-check" aria-hidden="true"></i>
-                      <p className="mb-0 text-size-16 text-white">
+                      <p className="mb-0 text-size-16 ">
                         {achievement}
                       </p>
                     </li>
@@ -166,10 +179,29 @@ const AboutSuwat = () => {
 
         .founderSwiper .swiper-slide {
           border-radius: 30px;
+          height: 350px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
-        .founderSwiper .swiper-slide img {
+        .founderSwiper .swiper-slide .about-image {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
           border-radius: 30px;
+        }
+
+        .founderSwiper .swiper-slide img,
+        .founder-image {
+          border-radius: 30px;
+          width: 100% !important;
+          height: 100% !important;
+          object-fit: cover !important;
+          display: block;
         }
 
         .founderSwiper .swiper-button-next,
@@ -231,6 +263,10 @@ const AboutSuwat = () => {
           .founderSwiper {
             height: 320px;
           }
+
+          .founderSwiper .swiper-slide {
+            height: 320px;
+          }
         }
 
         @media (max-width: 767px) {
@@ -260,6 +296,10 @@ const AboutSuwat = () => {
             height: 280px;
           }
 
+          .founderSwiper .swiper-slide {
+            height: 280px;
+          }
+
           .founderSwiper .swiper-button-next,
           .founderSwiper .swiper-button-prev {
             display: none; /* Hide navigation arrows on mobile */
@@ -282,6 +322,10 @@ const AboutSuwat = () => {
           }
 
           .founderSwiper {
+            height: 250px;
+          }
+
+          .founderSwiper .swiper-slide {
             height: 250px;
           }
 

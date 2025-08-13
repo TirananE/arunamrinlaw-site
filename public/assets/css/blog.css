@@ -1,7 +1,7 @@
 a {
 	outline: none;
 	text-decoration: none;
-	/* font-family: "Jost", sans-serif;  */
+	/* font-family: var(--font-forum), serif; */
 }
 
 .sub-banner li {
@@ -65,7 +65,7 @@ a {
 	line-height: 26px;
 	font-weight: 700;
 	margin-bottom: 12px;
-	/* font-family: "Merriweather", serif; */
+	/* font-family: var(--font-forum), serif; */
 	color: var(--e-global-color-secondary);
 	transition: all 0.3s ease-in-out;
 }
@@ -322,7 +322,7 @@ a.item-link {
 	line-height: 18px;
 	padding: 10px 16px;
 	height: auto;
-	/* font-family: "Jost", sans-serif; */
+	/* font-family: var(--font-forum), serif; */
 	background: var(--e-global-color-white);
 	border: 1px solid rgb(0 0 0 / 15%);
     border-radius: 10px;
@@ -535,7 +535,7 @@ a.item-link {
 	font-size: 20px;
 	line-height: 30px;
 	font-weight: 500;
-	/* font-family: "Merriweather", serif; */
+	/* font-family: var(--font-forum), serif; */
 	color: var(--e-global-color-secondary);
 	position: relative;
 	margin-bottom: 0;
@@ -583,7 +583,7 @@ a.item-link {
 	font-size: 16px;
     line-height: 18px;
     font-weight: 400;
-    /* font-family: "Jost", sans-serif; */
+    /* font-family: var(--font-forum), serif; */
     color: var(--e-global-color-white);
     background: var(--e-global-color-accent);
     padding: 11px 18px;
@@ -1018,7 +1018,7 @@ a.item-link {
     font-size: 16px;
     line-height: 16px;
     font-weight: 400;
-    /* font-family: "Jost", sans-serif; */
+    /* font-family: var(--font-forum), serif; */
     color: var(--e-global-color-text);
     padding: 18px;
     width: 100%;
@@ -1036,7 +1036,7 @@ a.item-link {
     font-size: 16px;
     line-height: 16px;
     font-weight: 400;
-    /* font-family: "Jost", sans-serif; */
+    /* font-family: var(--font-forum), serif; */
 	color: var(--e-global-color-text);
     padding: 11px 18px 13px;
 	margin-bottom: 16px;
@@ -1062,7 +1062,7 @@ a.item-link {
 	font-size: 18px;
     line-height: 18px;
     font-weight: 400;
-    /* font-family: "Jost", sans-serif; */
+    /* font-family: var(--font-forum), serif; */
     padding: 16px 30px;
 	border-radius: 5px;
 	color: var(--e-global-color-white);
@@ -1120,7 +1120,7 @@ a.item-link {
 	font-size: 16px;
 	line-height: 22px;
 	font-weight: 400;
-	/* font-family: "Jost", sans-serif; */
+	/* font-family: var(--font-forum), serif; */
 	color: var(--e-global-color-text);
 	background: transparent;
 	border: 1px solid rgb(0 0 0 / 15%);
@@ -1373,7 +1373,7 @@ a.item-link {
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
-    /* font-family: "Merriweather", serif; */
+    /* font-family: var(--font-forum), serif; */
 	text-decoration: none;
 	width: 66%;
 	padding: 0 0 0 16px;

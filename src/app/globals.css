@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-forum), var(--font-inter), sans-serif;
   overflow-x: hidden;
 }
 
@@ -141,6 +141,19 @@ section {
 /* Add padding to main content */
 main {
   padding-top: 65px;
+}
+
+/* Font utility classes */
+.font-forum {
+  font-family: var(--font-forum), serif;
+}
+
+.font-inter {
+  font-family: var(--font-inter), sans-serif;
+}
+
+.font-thai {
+  font-family: var(--font-ibm-plex-thai), sans-serif;
 }
 
 /* Animation classes */

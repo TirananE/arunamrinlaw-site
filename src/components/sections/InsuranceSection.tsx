@@ -18,8 +18,8 @@ const InsuranceSection = () => {
         <div className="row align-items-center" data-aos="fade-up">
           <div className="col-lg-6 col-md-12 col-sm-12 col-12">
             <div className="insurance_content">
-              <h2 className="text-white">Let&apos;s Get Started Your Insurance Now</h2>
-              <p className="text-white text-size-16 mb-0">
+              <h2 className="">Let&apos;s Get Started Your Insurance Now</h2>
+              <p className=" text-size-16 mb-0">
                 Quia voluptas aspernatur aurodit aut fugit, sed neatae vitae dicta ripis cing elit sed do incidunt labore aredolore.
               </p>
             </div>

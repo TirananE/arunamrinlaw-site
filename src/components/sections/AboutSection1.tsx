@@ -26,9 +26,9 @@ const AboutSection1 = () => {
           </div>
           <div className="col-lg-6 col-md-12 col-sm-12 col-12">
             <div className="about_content" data-aos="fade-up">
-              {/* <h6 className="text-white">{t('about')}</h6> */}
-              <h2 className="text-white">{t('commitment')}</h2>
-              <p className="text-white text text-size-16">
+              {/* <h6 className="">{t('about')}</h6> */}
+              <h2 className="">{t('commitment')}</h2>
+              <p className=" text text-size-16">
                 {t('commitment_description')}
               </p>
             </div>

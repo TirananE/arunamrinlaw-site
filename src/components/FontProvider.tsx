@@ -7,16 +7,19 @@ interface FontProviderProps {
   children: React.ReactNode;
   interClassName: string;
   thaiClassName: string;
+  forumClassName: string;
 }
 
 export const FontProvider: React.FC<FontProviderProps> = ({ 
   children, 
   interClassName, 
-  thaiClassName 
+  thaiClassName,
+  forumClassName
 }) => {
   const { language } = useLanguage();
   
-  const fontClassName = language === 'th' ? thaiClassName : interClassName;
+  // Use Forum for English, Thai font for Thai
+  const fontClassName = language === 'th' ? thaiClassName : forumClassName;
   
   return (
     <div className={fontClassName}>

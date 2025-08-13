@@ -45,29 +45,27 @@ Project:  Insurerity
 /*------------------------------------------------------------------
 # [Typography]
  
-Body copy: "Jost", sans-serif;
-Heading: "Urbanist", sans-serif;;
+Body copy: var(--font-forum), serif;
+Heading: var(--font-forum), serif;
+Note: Font Forum is loaded via Next.js font optimization
 */
 
 
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
-
 body {
-    /* font-family: "Urbanist", sans-serif; */
-    font-family: "Jost", sans-serif;
+    font-family: var(--font-forum), serif;
 }
 
 :root {
     --e-global-color-primary: #141430;
     --e-global-color-secondary: #2a2a2a;
-    --e-global-color-accent: #3dceb2;
-    --e-global-color-text: #6a6a6a;
+    --e-global-color-accent: #dcce54;
+    --e-global-color-text: rgb(255, 255, 255);
 	--e-global-color-white: #ffffff;
     --e-global-color-black: #000000;
     --e-global-color-dark-moderate-blue: #2d5a7a;
     --e-global-color-very-dark-mostly-black-blue: #10202c;
     --e-global-color-grayish-blue: #a7b8c5;
-    --e-global-color-light-grayish-cyan: #f5fefc;
+    --e-global-color-light-grayish-cyan: rgb(255, 255, 255);
     --e-global-color-very-light-gray: #e2e2e2;
     --e-global-color-light-moderate-blue: #4b7797;
     --e-global-color-light-yellow: #ffbf44;
@@ -80,39 +78,41 @@ h1{
     font-size: 66px;
     line-height: 70px;
     font-weight: 800;
-    font-family: "Urbanist", sans-serif;
+    font-family: var(--font-forum), serif;
 }
 h2{
     font-size: 46px;
     line-height: 50px;
     font-weight: 800;
-    color: var(--e-global-color-secondary);
-    font-family: "Urbanist", sans-serif;
+    /* color: rgb(214, 210, 196); */
+    color: rgb(241, 233, 161);
+    font-family: var(--font-forum), serif;
 }
 h3{
     font-size: 22px;
     line-height: 26px;
     font-weight: 700;
-    font-family: "Urbanist", sans-serif;
+    font-family: var(--font-forum), serif;
 }
 h4{
     font-size: 20px;
     line-height: 26px;
     font-weight: 700;
-    font-family: "Urbanist", sans-serif;
+    font-family: var(--font-forum), serif;
 }
 h5{
     font-size: 18px;
     line-height: 26px;
     font-weight: 700;
-    font-family: "Urbanist", sans-serif;
+    font-family: var(--font-forum), serif;
+    color: rgb(255, 255, 255);
 }
 h6{
     font-size: 16px;
     line-height: 24px;
     font-weight: 600;
     color: var(--e-global-color-accent);
-    font-family: "Urbanist", sans-serif;
+    font-family: var(--font-forum), serif;
 }
 p{
     font-size: 20px;
@@ -124,7 +124,7 @@ p{
     font-size: 18px;
     line-height: 30px;
     font-weight: 400;
-    color: var(--e-global-color-text);
+    color: rgb(255, 255, 255);
 }
 .text-size-16{
     font-size: 16px;
@@ -136,7 +136,7 @@ p{
     font-size: 14px;
     line-height: 22px;
     font-weight: 400;
-    color: var(--e-global-color-text);
+    /* color: var(--e-global-color-text); */
 }
 .all_button{
     font-size: 16px;
@@ -148,7 +148,7 @@ p{
     display: inline-block;
     color: var(--e-global-color-white);
     background: var(--e-global-color-accent);
-    font-family: "Urbanist", sans-serif;
+    font-family: var(--font-forum), serif;
     transition: all 0.3s ease-in-out;
 }
 .all_button:hover{
@@ -232,7 +232,7 @@ html{
     position: relative;
     text-align: center;
     display: inline-block;
-    font-family: "Urbanist", sans-serif;
+    font-family: var(--font-forum), serif;
     color: var(--e-global-color-white) !important;
     background-color: var(--e-global-color-dark-moderate-blue);
     transition: all 0.3s ease-in-out;
@@ -388,7 +388,7 @@ html{
     width: 67px;
     height: 1px;
     position: absolute;
-    background-color: var(--e-global-color-accent);
+    background-color: rgb(241, 233, 161);
 }
 .banner-con .banner_content h1{
     margin-bottom: 25px;
@@ -460,7 +460,7 @@ html{
     display: block;
     margin-bottom: 5px;
     color: var(--e-global-color-accent);
-    font-family: "Urbanist", sans-serif;
+    font-family: var(--font-forum), serif;
 }
 .banner-con .banner_wrapper .box .review{
     font-size: 14px;
@@ -652,7 +652,7 @@ html{
     text-align: center;
     position: relative;
     display: inline-block;
-    font-family: "Urbanist", sans-serif;
+    font-family: var(--font-forum), serif;
     color: var(--e-global-color-accent);
     transition: all 0.3s ease-in-out;
 }
@@ -736,7 +736,7 @@ html{
     font-size: 46px;
     line-height: 46px;
     font-weight: 700;
-    font-family: "Urbanist", sans-serif;
+    font-family: var(--font-forum), serif;
 }
 .choose-con .choose_wrapper .text {
     font-size: 16px;
@@ -775,7 +775,7 @@ html{
 .pricing-con .pricing-box span {
     display: inline-block;
     color: var(--e-global-color-secondary);
-    font-family: "Urbanist", sans-serif;
+    font-family: var(--font-forum), serif;
     transition: all 0.3s ease-in-out;
 }
 .pricing-con .pricing-box .dollar {
@@ -1003,7 +1003,7 @@ html{
     display: block;
     margin-bottom: 5px;
     color: var(--e-global-color-secondary);
-    font-family: "Urbanist", sans-serif;
+    font-family: var(--font-forum), serif;
 }
 .testimonial-con .testimonial-box .review{
     font-size: 14px;
@@ -1165,7 +1165,7 @@ html{
     font-size: 16px;
     line-height: 16px;
     font-weight: 700;
-    font-family: "Urbanist", sans-serif;
+    font-family: var(--font-forum), serif;
     padding: 21px 30px;
     text-align: center;
     display: inline-block;
@@ -1425,7 +1425,7 @@ html{
     font-weight: 600;
     margin-bottom: 0 !important;
     position: relative;
-    font-family: "Urbanist", sans-serif;
+    font-family: var(--font-forum), serif;
     color: var(--e-global-color-accent);
     transition: all 0.3s ease-in-out;
 }
@@ -1535,7 +1535,8 @@ html{
 
 .team-con {
     padding: 135px 0 115px;
-    background-color: var(--e-global-color-light-grayish-cyan);
+    /* background-color: var(--e-global-color-light-grayish-cyan); */
+    background-color: rgb(248, 246, 241);
 }
 .team-con .team_content h6 {
     margin-bottom: 14px;
@@ -1761,7 +1762,7 @@ html{
     font-weight: 800;
     display: inline-block;
     margin-bottom: 10px;
-    font-family: "Urbanist", sans-serif;
+    font-family: var(--font-forum), serif;
     color: var(--e-global-color-secondary);
 }
 .servicechoose-con .content .text{
@@ -2143,7 +2144,7 @@ html{
     text-align: center;
     position: relative;
     display: inline-block;
-    font-family: "Urbanist", sans-serif;
+    font-family: var(--font-forum), serif;
     color: var(--e-global-color-accent);
     transition: all 0.3s ease-in-out;
 }
@@ -2323,7 +2324,7 @@ html{
     display: block;
     margin-bottom: 2px;
     color: var(--e-global-color-secondary);
-    font-family: "Urbanist", sans-serif;
+    font-family: var(--font-forum), serif;
 }
 .hometestimonial-con .testimonial-box .position {
     font-size: 14px;
@@ -2487,8 +2488,8 @@ html{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(../images/banner3-backgroundimage.jpg);
-    background-color: var(--e-global-color-light-grayish-cyan);
+    /* background-image: url(../images/banner3-backgroundimage.jpg); */
+    background-color: #0f122b;
 }
 .travelbanner-con .banner_content {
     width: 720px;
@@ -2508,7 +2509,7 @@ html{
     width: 67px;
     height: 1px;
     position: absolute;
-    background-color: var(--e-global-color-accent);
+    background-color: rgb(241, 233, 161);
 }
 .travelbanner-con .banner_content h1{
     margin-bottom: 25px;
@@ -2574,7 +2575,7 @@ html{
     display: block;
     margin-bottom: -2px;
     color: var(--e-global-color-secondary);
-    font-family: "Urbanist", sans-serif;
+    font-family: var(--font-forum), serif;
 }
 .travelbanner-con .banner_wrapper .box .review{
     font-size: 14px;
@@ -2730,6 +2731,7 @@ html{
 /* Statistic */
 
 .statistic-con {
+    background-color: rgb(248, 246, 241) !important;
     padding: 135px 0 140px;
 }
 .statistic-con .statistic_content h6{
@@ -2770,13 +2772,13 @@ html{
     display: block;
     margin-bottom: 6px;
     color: var(--e-global-color-secondary);
-    font-family: "Urbanist", sans-serif;
+    font-family: var(--font-forum), serif;
 }
 .statistic-con .statistic-box .text {
     font-size: 16px;
     line-height: 16px;
     font-weight: 400;
-    color: var(--e-global-color-text);
+    /* color: var(--e-global-color-text); */
 }
 
 /* Type */
@@ -2805,7 +2807,7 @@ html{
     font-size: 24px;
     line-height: 24px;
     font-weight: 500;
-    font-family: "Urbanist", sans-serif;
+    font-family: var(--font-forum), serif;
 }
 .type-con .type-box .content {
     bottom: 26px;

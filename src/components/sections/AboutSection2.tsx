@@ -12,12 +12,12 @@ const AboutSection2 = () => {
         <div className="row align-items-center">
           <div className="col-lg-6 col-md-12 col-sm-12 col-12">
             <div className="about_content" data-aos="fade-up">
-              <p className="text-white text text-size-16">
+              <p className=" text text-size-16">
                 {t('our_team_description')}
               </p>
-              <p className="text-white text text-size-16">
+              <h3 className=" text text-size-18">
                 {t('peace_of_mind')}
-              </p>
+              </h3>
             </div>
           </div>
           <div className="col-lg-6 col-md-12 col-sm-12 col-12 text-lg-left text-center">

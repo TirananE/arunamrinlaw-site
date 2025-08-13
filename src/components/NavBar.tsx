@@ -45,15 +45,14 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" style={{backgroundColor: 'rgb(255, 255, 255) !important'}}>
       <div className="navbar-container">
         <div className="navbar-brand">
           {/* Arunamrinlaw */}
           <img
-            src="/assets/images/logo/2ARUNAMRIN.png"
+            src="/assets/images/logo/1ARUNAMRIN.png"
             alt="Logo"
             className="navbar-logo"
-            style={{ backgroundColor: "#0f122b", width: "150px" }}
           />
         </div>
         <button

@@ -11,7 +11,7 @@ const HomeSection = () => {
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl">
             Your Trusted Legal Partner for Business Success in Thailand
           </p>
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg hover:bg-blue-700 transition-colors">
+          <button className="bg-blue-600  px-8 py-3 rounded-lg text-lg hover:bg-blue-700 transition-colors">
             Contact Us
           </button>
         </div>

@@ -49,7 +49,7 @@ const StatisticSection = () => {
         <div className="row">
           <div className="col-12">
             <div className="statistic_content text-center" data-aos="fade-up">
-              <h2>{t('our_services')}</h2>
+              <h2 style={{color: '#0f122b !important'}}>{t('our_services')}</h2>
             </div>
           </div>
         </div>

@@ -11,7 +11,7 @@ const TypeSection = () => {
             <Link href="/portfolio">
               <div className="type-box box1 position-relative">
                 <div className="number position-absolute">
-                  <span className="text-white mb-0">01.</span>
+                  <span className=" mb-0">01.</span>
                 </div>
                 <figure className="mb-0">
                   <Image 
@@ -23,8 +23,8 @@ const TypeSection = () => {
                   />
                 </figure>
                 <div className="content position-absolute">
-                  <h3 className="text-white">Comprehensive Coverage</h3>
-                  <p className="text-size-16 text-white">Exercitationem ullam corporis</p>
+                  <h3 className="">Comprehensive Coverage</h3>
+                  <p className="text-size-16 ">Exercitationem ullam corporis</p>
                   <i className="fa-solid fa-arrow-right"></i>
                 </div>
               </div>
@@ -34,7 +34,7 @@ const TypeSection = () => {
             <Link href="/portfolio">
               <div className="type-box box1 position-relative">
                 <div className="number position-absolute">
-                  <span className="text-white mb-0">02.</span>
+                  <span className=" mb-0">02.</span>
                 </div>
                 <figure className="mb-0">
                   <Image 
@@ -46,8 +46,8 @@ const TypeSection = () => {
                   />
                 </figure>
                 <div className="content position-absolute">
-                  <h3 className="text-white">24/7 Assistance</h3>
-                  <p className="text-size-16 text-white">Maximus elementum odio</p>
+                  <h3 className="">24/7 Assistance</h3>
+                  <p className="text-size-16 ">Maximus elementum odio</p>
                   <i className="fa-solid fa-arrow-right"></i>
                 </div>
               </div>
@@ -57,7 +57,7 @@ const TypeSection = () => {
             <Link href="/portfolio">
               <div className="type-box box2 position-relative">
                 <div className="number position-absolute">
-                  <span className="text-white mb-0">03.</span>
+                  <span className=" mb-0">03.</span>
                 </div>
                 <figure className="mb-0">
                   <Image 
@@ -69,8 +69,8 @@ const TypeSection = () => {
                   />
                 </figure>
                 <div className="content position-absolute">
-                  <h3 className="text-white">Flexible Options</h3>
-                  <p className="text-size-16 text-white">Amet tincidunt elit lorem</p>
+                  <h3 className="">Flexible Options</h3>
+                  <p className="text-size-16 ">Amet tincidunt elit lorem</p>
                   <i className="fa-solid fa-arrow-right"></i>
                 </div>
               </div>
@@ -80,7 +80,7 @@ const TypeSection = () => {
             <Link href="/portfolio">
               <div className="type-box position-relative">
                 <div className="number position-absolute">
-                  <span className="text-white mb-0">04.</span>
+                  <span className=" mb-0">04.</span>
                 </div>
                 <figure className="mb-0">
                   <Image 
@@ -92,8 +92,8 @@ const TypeSection = () => {
                   />
                 </figure>
                 <div className="content position-absolute">
-                  <h3 className="text-white">Easy Claims Process</h3>
-                  <p className="text-size-16 text-white">Reutrum velit sit tincidunt</p>
+                  <h3 className="">Easy Claims Process</h3>
+                  <p className="text-size-16 ">Reutrum velit sit tincidunt</p>
                   <i className="fa-solid fa-arrow-right"></i>
                 </div>
               </div>

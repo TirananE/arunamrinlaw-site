@@ -92,7 +92,7 @@ const OurOfficeSection = () => {
         }
 
         .office_content h2 {
-          color: #ffffff;
+          /* color: #ffffff; */
           font-size: 2.5rem;
           font-weight: 700;
           margin-bottom: 3rem;

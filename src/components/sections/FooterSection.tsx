@@ -82,10 +82,16 @@ const FooterSection = () => {
                       </li>
                       <li className="text">
                         <i className="fa-solid fa-location-dot"></i>
-                        <p className="address mb-0">
+                        <a
+                          href="https://maps.app.goo.gl/rw8kxHS5FBBUd1SU8?g_st=com.google.maps.preview.copy"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-decoration-none address mb-0"
+                          style={{ display: "block" }}
+                        >
                           109/12, SOI LAT PHRAO 23, LAT PHRAO, CHANKASEM,
                           CHATUCHAK, BANGKOK 10900
-                        </p>
+                        </a>
                       </li>
                     </ul>
                   </div>
@@ -160,10 +166,16 @@ const FooterSection = () => {
                           className="fa-solid fa-location-dot me-2"
                           style={{ color: "#D4AF37" }}
                         ></i>
-                        <span>
+                        <a
+                          href="https://maps.app.goo.gl/rw8kxHS5FBBUd1SU8?g_st=com.google.maps.preview.copy"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-decoration-none"
+                          style={{ color: "white" }}
+                        >
                           109/12, SOI LAT PHRAO 23, LAT PHRAO, CHANKASEM,
                           CHATUCHAK, BANGKOK 10900
-                        </span>
+                        </a>
                       </div>
                       <div className="mb-3">
                         <i
