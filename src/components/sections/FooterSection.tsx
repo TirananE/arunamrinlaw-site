@@ -20,9 +20,12 @@ const FooterSection = () => {
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12 col-12">
                   <div className="logo-content">
-                    <h3 className="text-white text-4xl font-bold">
-                      Arunamrinlaw
-                    </h3>
+                  <img
+            src="/assets/images/logo/2ARUNAMRIN.png"
+            alt="Logo"
+            className="navbar-logo"
+            style={{ width: "200px", height: "auto", justifyContent: "center", alignItems: "center" }}
+          />
                     <p className="text-size-14 mb-0">
                       {t("professional_services")}
                     </p>

@@ -48,12 +48,13 @@ const NavBar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-brand">
-          Arunamrinlaw
-          {/* <img
-            src="/assets/images/logo.png"
+          {/* Arunamrinlaw */}
+          <img
+            src="/assets/images/logo/2ARUNAMRIN.png"
             alt="Logo"
             className="navbar-logo"
-          /> */}
+            style={{ backgroundColor: "#0f122b", width: "150px" }}
+          />
         </div>
         <button
           className={`navbar-toggle ${isOpen ? "active" : ""}`}
