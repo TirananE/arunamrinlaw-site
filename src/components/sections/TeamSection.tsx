@@ -96,7 +96,7 @@ const TeamSection = () => {
           <div className="row">
             <div className="col-12">
               <div className="team_content text-center" data-aos="fade-up">
-                <h2 style={{color: '#0f122b !important'}}>{t('our_members')}</h2>
+                <h2 style={{color: 'rgb(241, 233, 161) !important'}}>{t('our_members')}</h2>
               </div>
             </div>
           </div>

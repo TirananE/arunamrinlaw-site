@@ -4,16 +4,16 @@ import React from "react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper core and required modules
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const AboutSuwat = () => {
   const { t, i18n } = useTranslation();
-  const isThaiLanguage = i18n.language === 'th';
+  const isThaiLanguage = i18n.language === "th";
 
   // Array of founder images (only JPG/JPEG files)
   const founderImages = [
@@ -25,101 +25,130 @@ const AboutSuwat = () => {
     "/assets/images/founder/IMG_2894.JPG",
   ];
 
-  const achievements = isThaiLanguage ? [
-    t('suwat_achievements.1'),
-    t('suwat_achievements.2'), 
-    t('suwat_achievements.3'),
-    t('suwat_achievements.4'),
-    t('suwat_achievements.5'),
-    t('suwat_achievements.6'),
-    t('suwat_achievements.7'),
-    t('suwat_achievements.8'),
-    t('suwat_achievements.9'),
-  ] : [
-    "Serves the position as chairman of Arunamarin Law Co. Ltd.",
-    "One of the initial members of the first graduating class from Ramkhamhaeng Law School.",
-    "Association Secretary of Ramkhamhaeng Law School.",
-    "Deputy Secretary General at the Thai's Lawyer Council.",
-    "Master's degree in Public Administration from Ramkhamhaeng University.",
-    "Master of Arts in Political Science from Ramkhamhaeng University.",
-    "Legal consultant for Deputy Ministry of Transport, Deputy Minister of Interior, and Minister of Commerce.",
-    "Legal consultant for Bangkok University.",
-    "Ex Honorary Adviser for the study committee for anti-corruption and good governance.",
-  ];
+  const achievements = isThaiLanguage
+    ? [
+        t("suwat_achievements.1"),
+        t("suwat_achievements.2"),
+        t("suwat_achievements.3"),
+        t("suwat_achievements.4"),
+        t("suwat_achievements.5"),
+        t("suwat_achievements.6"),
+        t("suwat_achievements.7"),
+        t("suwat_achievements.8"),
+        t("suwat_achievements.9"),
+        t("suwat_achievements.10"),
+        t("suwat_achievements.11"),
+        t("suwat_achievements.12"),
+        t("suwat_achievements.13"),
+      ]
+    : [
+        t("suwat_achievements.1"),
+        t("suwat_achievements.2"),
+        t("suwat_achievements.3"),
+        t("suwat_achievements.4"),
+        t("suwat_achievements.5"),
+        t("suwat_achievements.6"),
+        t("suwat_achievements.7"),
+        t("suwat_achievements.8"),
+        t("suwat_achievements.9"),
+        t("suwat_achievements.10"),
+        t("suwat_achievements.11"),
+        t("suwat_achievements.12"),
+        t("suwat_achievements.13"),
+      ];
 
   return (
     <section id="about-suwat" className="travelabout-con position-relative">
-      <div className="container">
-        <div className="row align-items-center">
-          <div className="col-lg-6 col-md-12 col-sm-12 col-12 text-lg-left text-center">
+      <h2 className="text-center" style={{marginBottom: "26px"}}>
+        {isThaiLanguage ? t("about_suwat_title"): "About Suwat Apaipakdi"}
+      </h2>
+      <div className="container-fluid">
+        <div className="row justify-content-center align-items-center">
+          <div className="col-lg-8 col-md-10 col-sm-12 col-12 text-center">
             <div className="about_wrapper position-relative" data-aos="zoom-in">
-              <div className="founder-image-slider mb-0 w-100">
+              <div className="founder-image-slider mb-4 w-100">
                 <Swiper
-                  modules={[Navigation, Pagination, Autoplay]}
-                  spaceBetween={0}
-                  slidesPerView={1}
-                  navigation={{
-                    enabled: true,
-                  }}
-                  pagination={{ 
-                    clickable: true,
-                    dynamicBullets: true 
-                  }}
-                  autoplay={{
-                    delay: 3000,
-                    disableOnInteraction: false,
-                    pauseOnMouseEnter: true,
-                  }}
-                  loop={true}
-                  grabCursor={true}
-                  className="founderSwiper"
-                  breakpoints={{
-                    320: {
-                      navigation: {
-                        enabled: false,
-                      },
+                modules={[Navigation, Pagination, Autoplay]}
+                spaceBetween={0}
+                slidesPerView={1}
+                navigation={{
+                  enabled: true,
+                }}
+                pagination={{
+                  clickable: true,
+                  dynamicBullets: true,
+                }}
+                autoplay={{
+                  delay: 3000,
+                  disableOnInteraction: false,
+                  pauseOnMouseEnter: true,
+                }}
+                loop={true}
+                grabCursor={true}
+                className="founderSwiper"
+                breakpoints={{
+                  320: {
+                    navigation: {
+                      enabled: false,
                     },
-                    768: {
-                      navigation: {
-                        enabled: true,
-                      },
+                  },
+                  768: {
+                    navigation: {
+                      enabled: true,
                     },
-                  }}
-                >
-                  {founderImages.map((imageSrc, index) => (
-                    <SwiperSlide key={index}>
-                      <figure className="about-image mb-0">
-                        <Image
-                          src={imageSrc}
-                          alt={`Suwat Apaipakdi - Photo ${index + 1}`}
-                          width={450}
-                          height={350}
-                          className="img-fluid founder-image"
-                          style={{ objectFit: "cover", width: "100%", height: "100%" }}
-                        />
-                      </figure>
-                    </SwiperSlide>
-                  ))}
+                  },
+                }}
+              >
+                {founderImages.map((imageSrc, index) => (
+                  <SwiperSlide key={index}>
+                    <figure className="about-image mb-0">
+                      <Image
+                        src={imageSrc}
+                        alt={`Suwat Apaipakdi - Photo ${index + 1}`}
+                        width={700}
+                        height={500}
+                        className="img-fluid founder-image"
+                        style={{
+                          objectFit: "cover",
+                          width: "100%",
+                          height: "100%",
+                        }}
+                      />
+                    </figure>
+                  </SwiperSlide>
+                ))}
                 </Swiper>
               </div>
             </div>
           </div>
-          <div className="col-lg-6 col-md-12 col-sm-12 col-12">
-            <div className="about_content" data-aos="fade-up">
-              <h2 className="">{isThaiLanguage ? t('about_suwat_title') : 'About Suwat Apaipakdi'}</h2>
-
+        </div>
+        <div className="row justify-content-center">
+          <div className="col-lg-10 col-md-12 col-sm-12 col-12">
+            <div className="about_content text-center" data-aos="fade-up">
               {/* Achievements List */}
               <div className="achievements-container">
-                <ul className="list-unstyled mb-0">
-                  {achievements.map((achievement, index) => (
-                    <li key={index} className="achievement-item">
-                      <i className="fa fa-check" aria-hidden="true"></i>
-                      <p className="mb-0 text-size-16 ">
-                        {achievement}
-                      </p>
-                    </li>
-                  ))}
-                </ul>
+                <div className="achievements-grid">
+                  <div className="achievements-column">
+                    <ul className="list-unstyled mb-0">
+                      {achievements.slice(0, Math.ceil(achievements.length / 2)).map((achievement, index) => (
+                        <li key={index} className="achievement-item">
+                          <i className="fa fa-check" aria-hidden="true"></i>
+                          <p className="mb-0 text-size-16">{achievement}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="achievements-column">
+                    <ul className="list-unstyled mb-0">
+                      {achievements.slice(Math.ceil(achievements.length / 2)).map((achievement, index) => (
+                        <li key={index + Math.ceil(achievements.length / 2)} className="achievement-item">
+                          <i className="fa fa-check" aria-hidden="true"></i>
+                          <p className="mb-0 text-size-16">{achievement}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -129,6 +158,20 @@ const AboutSuwat = () => {
       <style jsx global>{`
         .achievements-container {
           margin-top: 28px;
+        }
+
+        .achievements-grid {
+          display: flex;
+          gap: 40px;
+          justify-content: center;
+          align-items: flex-start;
+          max-width: 1000px;
+          margin: 0 auto;
+        }
+
+        .achievements-column {
+          flex: 1;
+          text-align: left;
         }
 
         .achievement-item {
@@ -164,22 +207,23 @@ const AboutSuwat = () => {
 
         /* Founder Slider Styles */
         .founder-image-slider {
-          border-radius: 30px;
+          border-radius: 20px;
           overflow: hidden;
-          max-width: 450px;
+          max-width: 700px;
           margin: 0 auto;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
         .founderSwiper {
-          border-radius: 30px;
+          border-radius: 20px;
           overflow: hidden;
           width: 100%;
-          height: 350px;
+          height: 500px;
         }
 
         .founderSwiper .swiper-slide {
-          border-radius: 30px;
-          height: 350px;
+          border-radius: 20px;
+          height: 500px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -192,12 +236,12 @@ const AboutSuwat = () => {
           align-items: center;
           justify-content: center;
           overflow: hidden;
-          border-radius: 30px;
+          border-radius: 20px;
         }
 
         .founderSwiper .swiper-slide img,
         .founder-image {
-          border-radius: 30px;
+          border-radius: 20px;
           width: 100% !important;
           height: 100% !important;
           object-fit: cover !important;
@@ -206,12 +250,13 @@ const AboutSuwat = () => {
 
         .founderSwiper .swiper-button-next,
         .founderSwiper .swiper-button-prev {
-          color: rgba(255, 255, 255, 0.8);
-          background: rgba(0, 0, 0, 0.3);
-          width: 40px;
-          height: 40px;
+          color: rgba(255, 255, 255, 0.9);
+          background: rgba(0, 0, 0, 0.4);
+          width: 50px;
+          height: 50px;
           border-radius: 50%;
           transition: all 0.3s ease;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         .founderSwiper .swiper-button-next:hover,
@@ -222,7 +267,7 @@ const AboutSuwat = () => {
 
         .founderSwiper .swiper-button-next::after,
         .founderSwiper .swiper-button-prev::after {
-          font-size: 16px;
+          font-size: 18px;
           font-weight: bold;
         }
 
@@ -244,11 +289,34 @@ const AboutSuwat = () => {
           transform: scale(1.2);
         }
 
+        @media (max-width: 1199px) {
+          .achievements-grid {
+            gap: 30px;
+          }
+
+          .founder-image-slider {
+            max-width: 600px;
+          }
+
+          .founderSwiper {
+            height: 450px;
+          }
+
+          .founderSwiper .swiper-slide {
+            height: 450px;
+          }
+        }
+
         @media (max-width: 991px) {
           .about_content {
             padding-left: 0 !important;
-            margin-top: 40px;
+            /* margin-top: 40px; */
             text-align: center;
+          }
+
+          .achievements-grid {
+            flex-direction: column;
+            gap: 0;
           }
 
           .achievement-item {
@@ -257,15 +325,21 @@ const AboutSuwat = () => {
           }
 
           .founder-image-slider {
-            max-width: 400px;
+            max-width: 500px;
           }
 
           .founderSwiper {
-            height: 320px;
+            height: 400px;
           }
 
           .founderSwiper .swiper-slide {
-            height: 320px;
+            height: 400px;
+          }
+
+          .founderSwiper .swiper-button-next,
+          .founderSwiper .swiper-button-prev {
+            width: 45px;
+            height: 45px;
           }
         }
 
@@ -289,15 +363,15 @@ const AboutSuwat = () => {
           }
 
           .founder-image-slider {
-            max-width: 300px;
+            max-width: 400px;
           }
 
           .founderSwiper {
-            height: 280px;
+            height: 350px;
           }
 
           .founderSwiper .swiper-slide {
-            height: 280px;
+            height: 350px;
           }
 
           .founderSwiper .swiper-button-next,
@@ -318,15 +392,15 @@ const AboutSuwat = () => {
 
         @media (max-width: 480px) {
           .founder-image-slider {
-            max-width: 250px;
+            max-width: 320px;
           }
 
           .founderSwiper {
-            height: 250px;
+            height: 300px;
           }
 
           .founderSwiper .swiper-slide {
-            height: 250px;
+            height: 300px;
           }
 
           .founderSwiper .swiper-pagination {

@@ -29,11 +29,19 @@
   .homebanner-con ul {
     left: -130px;
   }
+  .travel_banner_outer .container {
+    max-width: 1400px;
+    margin: auto;
+  }
 }
 @media screen and (min-width: 1700px) and (max-width: 1799px) {
   /* Home 2 */
   .homebanner-con ul {
     left: -80px;
+  }
+  .travel_banner_outer .container {
+    max-width: 1400px;
+    margin: auto;
   }
 }
 @media screen and (min-width: 1600px) and (max-width: 1730px) {
@@ -51,6 +59,11 @@
   /* Home 3 */
   .travelbanner-con .banner_wrapper .banner-image::before {
     right: -80px;
+  }
+
+  .travel_banner_outer .container {
+    max-width: 1400px;
+    margin: auto;
   }
   /* Portfolio pop */
   .project_modal .modal-dialog {
@@ -139,6 +152,10 @@
   /* Project pop */
   .project_modal .modal-dialog {
     max-width: 58%;
+  }
+  .travel_banner_outer .container {
+    max-width: 1400px;
+    margin: auto;
   }
 }
 @media screen and (max-width: 1440px) {
@@ -480,7 +497,7 @@
     padding: 35px 40px;
   }
   .travelabout-con {
-    padding: 64px !important;
+    padding: 32px !important; 
 
     /* padding: 100px 0 130px; */
   }
@@ -525,6 +542,11 @@
   }
   .insurance-con .insurance-leftimage {
     display: none;
+  }
+  /* Travel Banner for MacBook */
+  .travel_banner_outer .container {
+    max-width: 1350px;
+    margin: auto;
   }
   /* Portfolio popup */
   .project_modal .modal-dialog {
@@ -572,6 +594,10 @@
 }
 
 @media screen and (max-width: 1199px) {
+  .travel_banner_outer .container {
+    max-width: 1000px;
+    margin: auto;
+  }
   h1 {
     font-size: 46px;
     line-height: 50px;

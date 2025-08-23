@@ -157,11 +157,6 @@ export const teamMembersDataKeys: TeamMemberWithKeys[] = [
     positionKey: "international_client_representative",
     imageUrl: "/assets/images/members/Nareeporn.jpg",
   },
-  {
-    name: "Supisara Angthong",
-    positionKey: "international_client_representative",
-    imageUrl: "/assets/images/members/Supisara.jpg",
-  },
 ];
 
 // Backward compatibility - deprecated, use teamMembersDataKeys instead
@@ -205,11 +200,6 @@ export const teamMembersData: TeamMember[] = [
     name: "Nareeporn Apaipakdi",
     position: "International client representative",
     imageUrl: "/assets/images/members/Nareeporn.jpg",
-  },
-  {
-    name: "Supisara Angthong",
-    position: "International client representative",
-    imageUrl: "/assets/images/members/Supisara.jpg",
   },
 ];
 

@@ -19,7 +19,7 @@
 
 .navbar-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 15px;
   display: flex;
@@ -114,12 +114,32 @@
   color: #dcce54;
 }
 
-.language-switcher-item {
-  margin-left: 1rem;
-}
-
 .language-switcher-item::after {
   display: none !important;
+}
+
+
+.consultation-button-item::after {
+  display: none !important;
+}
+
+.consultation-btn {
+  background-color: #8B7355;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.consultation-btn:hover {
+  background-color: #7a6449;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(139, 115, 85, 0.3);
 }
 
 /* Language Switcher Styles */
@@ -239,6 +259,25 @@
     margin-left: 0;
     margin-top: 1rem;
     padding: 1rem;
+  }
+
+  .consultation-button-item {
+    margin-left: 0;
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+
+  .consultation-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+
+  .consultation-btn:hover {
+    background-color: #7a6449;
+    transform: none;
+    box-shadow: none;
   }
 
   .language-btn {

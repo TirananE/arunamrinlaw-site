@@ -70,7 +70,7 @@ const OurOfficeSection = () => {
       </div>
       <style jsx>{`
         .office-con {
-          padding: 100px 0;
+          /* padding: 100px 0; */
           background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
           position: relative;
         }

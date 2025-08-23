@@ -8,6 +8,7 @@ const AboutSection1 = () => {
   const { t } = useLanguage();
   return (
     <section id="about" className="travelabout-con position-relative">
+      <h2 className="text-center" style={{marginBottom: "26px"}}>{t('commitment')}</h2>
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6 col-md-12 col-sm-12 col-12 text-lg-left text-center">
@@ -27,7 +28,6 @@ const AboutSection1 = () => {
           <div className="col-lg-6 col-md-12 col-sm-12 col-12">
             <div className="about_content" data-aos="fade-up">
               {/* <h6 className="">{t('about')}</h6> */}
-              <h2 className="">{t('commitment')}</h2>
               <p className=" text text-size-16">
                 {t('commitment_description')}
               </p>

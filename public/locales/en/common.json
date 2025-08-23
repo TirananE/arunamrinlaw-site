@@ -17,7 +17,7 @@
   "banner_title": "A well-respected Thai law firm with 50 years of experience.",
   "banner_description": "One of the most trusted and respected law firms in the industry. Known for our unwavering commitment to excellence, we combine deep legal expertise with strategic thinking to deliver results that exceed expectations.",
   "banner_tagline": "We Don't Just Practice Law — We Define It.",
-  "commitment": "Commitment",
+  "commitment": "COMMITMENT",
   "commitment_description": "Our founder, Mr.Suwat Apaipakdi, has dedicated his life to work and all his clients. He promised to deliver the best outcome for all the clients as well as bring justice and quality to society. This is why Arunamrin has become a well-known and well-respected law firm in Thailand that has a long history of more than 50 years. At Arunamrin, we are committed to delivering clear, strategic, and results-driven legal counsel. Whether you are an individual, a business, or an organization, we offer personalized legal solutions tailored to your unique needs and challenges.",
   "our_team_description": "With a team of experienced attorneys dedicated to excellence, integrity, and advocacy, we handle each case with the utmost professionalism and care. From complex litigation to day-to-day legal advice, we are here to help you navigate the law with confidence and clarity. Our clients range from individuals to multinational corporations — all seeking more than just legal support, but a true strategic advantage. With a reputation built on integrity, innovation, and proven success, we continue to lead the way in shaping the future of legal practice.",
   "peace_of_mind": "— Your peace of mind is our priority. Let us be your trusted legal partner. —",
@@ -98,14 +98,18 @@
   "intellectual_property_desc": "Trademark registration, patent applications, IP protection",
   "about_suwat_title": "About Suwat Apaipakdi",
   "suwat_achievements": {
-    "1": "Serves the position as chairman of Arunamarin Law Co. Ltd.",
-    "2": "One of the initial members of the first graduating class from Ramkhamhaeng Law School.",
-    "3": "Association Secretary of Ramkhamhaeng Law School.",
+    "1": "Suwat Apaipakdi serves the position as chairman of Arunamarin Law Co. Ltd.",
+    "2": "He was one of the initial members of the first graduating class from Ramkumhang Law School.",
+    "3": "Association Secretary of Ramkumhang Law School.",
     "4": "Deputy Secretary General at the Thai's Lawyer Council.",
-    "5": "Master's degree in Public Administration from Ramkhamhaeng University.",
-    "6": "Master of Arts in Political Science from Ramkhamhaeng University.",
-    "7": "Legal consultant for Deputy Ministry of Transport, Deputy Minister of Interior, and Minister of Commerce.",
-    "8": "Legal consultant for Bangkok University.",
-    "9": "Ex Honorary Adviser for the study committee for anti-corruption and good governance."
+    "5": "Master's degree in Public Administration from Ramkumhang University.",
+    "6": "Master of Arts in Political Science from Ramkumhang University.",
+    "7": "Legal consultant for the Deputy Ministry of Transport, Deputy Minister of Interior, and Minister of Commerce.",
+    "8": "An Ex-Honorary Adviser for the study committee for anti-corruption and good governance.",
+    "9": "Legal consultant for Bangkok University.",
+    "10": "Legal Consultant for The Sukosol Group",
+    "11": "Legal Consultant for The Saim, The BayView Pattaya, Siam Bayshore Resort Pattaya, Wave Pattaya",
+    "12": "Legal Consultant for Impact Arena, Muang Thong Thani",
+    "13": "Legal Consultant for Boonnumpanich"
   }
 }

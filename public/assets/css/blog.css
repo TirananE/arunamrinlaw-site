@@ -1594,7 +1594,7 @@ a.item-link {
 }
 
 .load-more a {
-	border-radius: 30px;
+	border-radius: 16px;;
 	padding: 11px 25px;
 	display: inline-block;
 	background-color: var(--e-global-color-secondary);
