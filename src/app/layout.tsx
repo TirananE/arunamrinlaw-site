@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, IBM_Plex_Sans_Thai_Looped, Forum } from "next/font/google";
+import { Inter, Forum } from "next/font/google";
 import Script from "next/script";
 import Preloader from "@/components/Preloader";
 import NavBar from "@/components/NavBar";
@@ -13,12 +13,7 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const ibmPlexSansThaiLooped = IBM_Plex_Sans_Thai_Looped({
-  subsets: ["thai"],
-  weight: ["400", "500", "700"],
-  display: "swap",
-  variable: "--font-ibm-plex-thai",
-});
+
 
 const forum = Forum({
   subsets: ["latin"],
@@ -48,11 +43,10 @@ export default function RootLayout({
         <link rel="stylesheet" href="/assets/css/aos.css" />
         <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
       </head>
-      <body className={`${inter.variable} ${ibmPlexSansThaiLooped.variable} ${forum.variable}`}>
+      <body className={`${inter.variable} ${forum.variable}`}>
         <LanguageProvider>
           <FontProvider 
             interClassName={inter.className}
-            thaiClassName={ibmPlexSansThaiLooped.className}
             forumClassName={forum.className}
           >
             <Preloader />
