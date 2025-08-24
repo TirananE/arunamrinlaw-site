@@ -1317,7 +1317,7 @@
   }
   /* Home 3 */
   .travelbanner-con {
-    padding: 80px 0;
+    padding: 200px 0;
   }
   .travelbanner-con .banner_content {
     width: 450px;
@@ -2557,7 +2557,7 @@
   /* Home 3 */
   .travelbanner-con {
     padding: 60px 0;
-    background-image: none;
+    /* background-image: none; */
   }
   .travelbanner-con .banner_content {
     width: 100%;

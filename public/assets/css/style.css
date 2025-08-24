@@ -55,23 +55,24 @@ body {
 }
 
 :root {
-  --e-global-color-primary: #141430;
-  --e-global-color-secondary: #2a2a2a;
-  --e-global-color-accent: #dcce54;
-  --e-global-color-text: rgb(255, 255, 255);
+  /* Modern design system colors */
+  --e-global-color-primary: #1a365d;
+  --e-global-color-secondary: #374151;
+  --e-global-color-accent: #d4af37;
+  --e-global-color-text: #6b7280;
   --e-global-color-white: #ffffff;
   --e-global-color-black: #000000;
-  --e-global-color-dark-moderate-blue: #2d5a7a;
-  --e-global-color-very-dark-mostly-black-blue: #10202c;
-  --e-global-color-grayish-blue: #a7b8c5;
-  --e-global-color-light-grayish-cyan: rgb(255, 255, 255);
-  --e-global-color-very-light-gray: #e2e2e2;
-  --e-global-color-light-moderate-blue: #4b7797;
-  --e-global-color-light-yellow: #ffbf44;
-  --e-global-color-nav-text: #0f0200;
-  --e-global-color-very-dark-gray-mostly-black: #282828;
-  --e-global-color-star-yellow: #fbc729;
-  --e-global-color-pure-red: #ff0000;
+  --e-global-color-dark-moderate-blue: #2d5a87;
+  --e-global-color-very-dark-mostly-black-blue: #0f1419;
+  --e-global-color-grayish-blue: #9ca3af;
+  --e-global-color-light-grayish-cyan: #f8fafc;
+  --e-global-color-very-light-gray: #e5e7eb;
+  --e-global-color-light-moderate-blue: #2d5a87;
+  --e-global-color-light-yellow: #e8c547;
+  --e-global-color-nav-text: #374151;
+  --e-global-color-very-dark-gray-mostly-black: #374151;
+  --e-global-color-star-yellow: #d4af37;
+  --e-global-color-pure-red: #ef4444;
 }
 h1 {
   font-size: 66px;
@@ -140,19 +141,23 @@ p {
 .all_button {
   font-size: 16px;
   line-height: 16px;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 12px;
   position: relative;
   display: inline-block;
   color: var(--e-global-color-white);
-  background: var(--e-global-color-accent);
-  font-family: var(--font-forum), serif;
-  transition: all 0.3s ease-in-out;
+  background: linear-gradient(135deg, var(--e-global-color-primary) 0%, var(--e-global-color-dark-moderate-blue) 100%);
+  font-family: var(--font-inter), sans-serif;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  padding: 0.875rem 2rem;
 }
 .all_button:hover {
   color: var(--e-global-color-white);
-  background: var(--e-global-color-dark-moderate-blue);
+  background: linear-gradient(135deg, var(--e-global-color-dark-moderate-blue) 0%, var(--e-global-color-primary) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 .all_button i {
   font-size: 12px;
@@ -2491,21 +2496,23 @@ html {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* background-image: url(../images/banner3-backgroundimage.jpg); */
-  background-color: #0f122b;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/472347.jpg);
+  /* background-color: #0f122b; */
 }
 .travelbanner-con .banner_content {
   width: 720px;
+  text-align: center;
+  margin: 0 auto;
 }
 .travelbanner-con .banner_content h5 {
-  padding-left: 84px;
   margin-bottom: 18px;
   font-weight: 600;
   position: relative;
+  display: inline-block;
 }
 .travelbanner-con .banner_content h5::before {
   content: "";
-  left: 0;
+  left: -84px;
   top: 0;
   bottom: 0;
   margin: auto 0;
@@ -2520,6 +2527,9 @@ html {
 .travelbanner-con .banner_content p {
   margin-bottom: 40px;
   padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
 }
 .travelbanner-con .banner_content .all_button {
   width: 184px;
@@ -2537,7 +2547,23 @@ html {
 .travelbanner-con .banner_wrapper .banner-image {
   position: relative;
   top: 0;
-  right: 0;
+}
+
+/* Responsive improvements for banner text centering */
+@media (max-width: 768px) {
+  .travelbanner-con .banner_content {
+    width: 100%;
+    padding: 0 15px;
+  }
+  
+  .travelbanner-con .banner_content h5::before {
+    display: none;
+  }
+  
+  .travelbanner-con .banner_content p {
+    padding-right: 0;
+    max-width: 100%;
+  }
 }
 .travelbanner-con .banner_wrapper .banner-image img {
   border-radius: 16px;
@@ -2734,7 +2760,7 @@ html {
 /* Statistic */
 
 .statistic-con {
-  background-color: #0f122b !important;
+  /* background-color: #0f122b !important; */
   padding: 135px 0 140px;
 }
 .statistic-con .statistic_content h6 {
@@ -2779,7 +2805,7 @@ html {
 }
 .statistic-con .statistic-box .text {
   font-size: 16px;
-  line-height: 16px;
+  line-height: 24px;
   font-weight: 400;
   /* color: var(--e-global-color-text); */
 }

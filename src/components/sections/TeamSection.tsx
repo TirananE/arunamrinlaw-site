@@ -87,7 +87,15 @@ const customArrowStyles = `
 
 
 const TeamSection = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  
+  // Ensure Suwat Apaipakdi always appears first
+  const sortedTeamMembers = [...teamMembersDataKeys].sort((a, b) => {
+    if (a.name === "Suwat Apaipakdi") return -1;
+    if (b.name === "Suwat Apaipakdi") return 1;
+    return 0;
+  });
+  
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: customArrowStyles }} />
@@ -125,10 +133,10 @@ const TeamSection = () => {
               }}
               aria-label="Team Members Carousel"
             >
-              {teamMembersDataKeys.map((member, index) => (
+              {sortedTeamMembers.map((member, index) => (
                 <SplideSlide key={index}>
                   <TeamCard
-                    name={member.name}
+                    name={language === 'th' ? member.nameThai : member.name}
                     position={t(member.positionKey)}
                     imageUrl={member.imageUrl}
                   />

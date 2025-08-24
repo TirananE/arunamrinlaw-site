@@ -1,13 +1,54 @@
+/* Background Image with Blur Effect */
+.statistic-con {
+  position: relative;
+  overflow: hidden;
+}
+
+.statistic-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/images/services/25680723-IMG_9332.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(10px);
+  transform: scale(1.1); /* Slightly scale up to avoid blur edge artifacts */
+  z-index: -2;
+}
+
+.statistic-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(255, 255, 255, 0.85); White overlay with transparency */
+  z-index: -1;
+}
+
 .statistic-con .statistic-box {
   min-height: 280px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.95
+  ); /* Semi-transparent white background for boxes */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .border-radius-30 {
-  border-radius: 16px;;
+  border-radius: 16px;
 }
 
 .statistic-con .row {
@@ -17,6 +58,7 @@
 @media (max-width: 991px) {
   .statistic-con .statistic-box {
     min-height: 250px;
+    background: rgba(255, 255, 255, 0.9);
   }
 }
 
@@ -24,22 +66,23 @@
   .statistic-con .statistic-box {
     min-height: 180px;
     padding: 15px 5px;
+    background: rgba(255, 255, 255, 0.92);
   }
-  
+
   .statistic-con .statistic-box figure {
     margin-bottom: 10px;
   }
-  
+
   .statistic-con .statistic-box figure img {
     width: 40px !important;
     height: 40px !important;
   }
-  
+
   .statistic-con .statistic-box .value h3 {
     font-size: 1.1rem;
     margin-bottom: 8px;
   }
-  
+
   .statistic-con .statistic-box .text {
     font-size: 0.85rem;
     line-height: 1.3;
@@ -53,12 +96,13 @@
   .statistic-con .statistic-box {
     min-height: 160px;
     padding: 12px 3px;
+    background: rgba(255, 255, 255, 0.94);
   }
-  
+
   .statistic-con .statistic-box .value h3 {
     font-size: 1rem;
   }
-  
+
   .statistic-con .statistic-box .text {
     font-size: 0.8rem;
   }

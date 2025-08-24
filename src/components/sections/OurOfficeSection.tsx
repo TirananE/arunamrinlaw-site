@@ -1,22 +1,23 @@
-'use client'
+"use client";
 
 import React from "react";
 import Image from "next/image";
-import { useLanguage } from '../LanguageProvider';
+import { useLanguage } from "../LanguageProvider";
 
 const OurOfficeSection = () => {
   const { t } = useLanguage();
   const allOfficeImages = [
     "/assets/images/office_and_location/25680723-IMG_9309.jpg",
-    "/assets/images/office_and_location/25680723-IMG_9317.jpg", 
-    "/assets/images/office_and_location/25680723-IMG_9321.jpg",
+    "/assets/images/office_and_location/25680723-IMG_9317.jpg",
+    "/assets/images/office_and_location/25680723-IMG_9349.jpg",
     "/assets/images/office_and_location/25680723-IMG_9323.jpg",
     "/assets/images/office_and_location/25680723-IMG_9332.jpg",
+    "/assets/images/office_and_location/Studio-Session-600.jpg",
     "/assets/images/office_and_location/25680723-IMG_9354.jpg",
-    "/assets/images/office_and_location/25680723-IMG_9355.jpg",
+    "/assets/images/office_and_location/25680723-IMG_9325.jpg",
     "/assets/images/office_and_location/25680723-IMG_9356.jpg",
     "/assets/images/office_and_location/25680723-IMG_9359.jpg",
-    "/assets/images/office_and_location/25680723-IMG_9380.jpg"
+    // "/assets/images/office_and_location/25680723-IMG_9380.jpg",
   ];
 
   // Show 9 images on desktop (lg and above), 10 images on other devices
@@ -28,12 +29,14 @@ const OurOfficeSection = () => {
     };
 
     checkScreenSize();
-    window.addEventListener('resize', checkScreenSize);
+    window.addEventListener("resize", checkScreenSize);
 
-    return () => window.removeEventListener('resize', checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
-  const imagesToShow = isDesktop ? allOfficeImages.slice(0, 9) : allOfficeImages;
+  const imagesToShow = isDesktop
+    ? allOfficeImages.slice(0, 9)
+    : allOfficeImages;
 
   return (
     <section id="office" className="office-con position-relative">
@@ -41,14 +44,19 @@ const OurOfficeSection = () => {
         <div className="row">
           <div className="col-12">
             <div className="office_content text-center" data-aos="fade-up">
-              <h2>{t('our_office')}</h2>
+              <div style={{ paddingTop: "32px" }}></div>
+              <h2>{t("our_office")}</h2>
             </div>
           </div>
         </div>
         <div className="row" data-aos="fade-up">
           {imagesToShow.map((imageSrc, index) => (
             <div key={index} className="col-lg-4 col-md-6 col-sm-12 mb-4">
-              <div className="office-image-wrapper position-relative" data-aos="zoom-in" data-aos-delay={index * 100}>
+              <div
+                className="office-image-wrapper position-relative"
+                data-aos="zoom-in"
+                data-aos-delay={index * 100}
+              >
                 <figure className="office-image mb-0">
                   <Image
                     src={imageSrc}
@@ -59,7 +67,7 @@ const OurOfficeSection = () => {
                     style={{
                       objectFit: "cover",
                       height: "300px",
-                      width: "100%"
+                      width: "100%",
                     }}
                   />
                 </figure>
@@ -76,13 +84,13 @@ const OurOfficeSection = () => {
         }
 
         .office-con::before {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           left: 0;
           right: 0;
           bottom: 0;
-          background:  #0f122b  ;
+          background: #0f122b;
           z-index: 1;
         }
 
@@ -130,7 +138,7 @@ const OurOfficeSection = () => {
           .office-con {
             padding: 60px 0;
           }
-          
+
           .office_content h2 {
             font-size: 2rem;
             margin-bottom: 2rem;

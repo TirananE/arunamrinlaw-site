@@ -45,32 +45,16 @@ const StatisticSection = () => {
   const { t } = useLanguage();
   return (
     <section id="statistic" className="statistic-con position-relative">
-      <div className="container">
+      {/* Background Image with Blur */}
+      <div className="statistic-background" />
+      <div className="statistic-overlay" />
+      
+      <div className="container position-relative">
         <div className="row">
           <div className="col-12">
             <div className="statistic_content text-center" data-aos="fade-up">
               <h2>{t('our_services')}</h2>
             </div>
-          </div>
-        </div>
-        <div
-          className="col-lg-6 col-md-12 col-sm-12 col-12 text-lg-left text-center"
-          style={{
-            marginBottom: "24px",
-            alignItems: "center",
-            width: "100%",
-          }}
-        >
-          <div className="about_wrapper position-relative" data-aos="zoom-in">
-            <figure className="about-image mb-0">
-              <Image
-                src="/assets/images/services/25680723-IMG_9317.jpg"
-                alt="about"
-                width={600}
-                height={400}
-                className="img-fluid border-radius-30"
-              />
-            </figure>
           </div>
         </div>
         <div className="row" data-aos="fade-up">
