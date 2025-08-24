@@ -2491,21 +2491,23 @@ html {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* background-image: url(../images/banner3-backgroundimage.jpg); */
-  background-color: #0f122b;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/472347.jpg);
+  /* background-color: #0f122b; */
 }
 .travelbanner-con .banner_content {
   width: 720px;
+  text-align: center;
+  margin: 0 auto;
 }
 .travelbanner-con .banner_content h5 {
-  padding-left: 84px;
   margin-bottom: 18px;
   font-weight: 600;
   position: relative;
+  display: inline-block;
 }
 .travelbanner-con .banner_content h5::before {
   content: "";
-  left: 0;
+  left: -84px;
   top: 0;
   bottom: 0;
   margin: auto 0;
@@ -2520,6 +2522,9 @@ html {
 .travelbanner-con .banner_content p {
   margin-bottom: 40px;
   padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
 }
 .travelbanner-con .banner_content .all_button {
   width: 184px;
@@ -2537,7 +2542,23 @@ html {
 .travelbanner-con .banner_wrapper .banner-image {
   position: relative;
   top: 0;
-  right: 0;
+}
+
+/* Responsive improvements for banner text centering */
+@media (max-width: 768px) {
+  .travelbanner-con .banner_content {
+    width: 100%;
+    padding: 0 15px;
+  }
+  
+  .travelbanner-con .banner_content h5::before {
+    display: none;
+  }
+  
+  .travelbanner-con .banner_content p {
+    padding-right: 0;
+    max-width: 100%;
+  }
 }
 .travelbanner-con .banner_wrapper .banner-image img {
   border-radius: 16px;
@@ -2779,7 +2800,7 @@ html {
 }
 .statistic-con .statistic-box .text {
   font-size: 16px;
-  line-height: 16px;
+  line-height: 24px;
   font-weight: 400;
   /* color: var(--e-global-color-text); */
 }

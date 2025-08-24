@@ -20,12 +20,17 @@ const FooterSection = () => {
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12 col-12">
                   <div className="logo-content">
-                  <img
-            src="/assets/images/logo/2ARUNAMRIN.png"
-            alt="Logo"
-            className="navbar-logo"
-            style={{ width: "200px", height: "auto", justifyContent: "center", alignItems: "center" }}
-          />
+                    <img
+                      src="/assets/images/logo/2ARUNAMRIN.png"
+                      alt="Logo"
+                      className="navbar-logo"
+                      style={{
+                        width: "200px",
+                        height: "auto",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    />
                     <p className="text-size-14 mb-0">
                       {t("professional_services")}
                     </p>
@@ -138,13 +143,26 @@ const FooterSection = () => {
                   aria-label="Close"
                 ></button>
               </div>
-              <div className="modal-body p-0">
-                <div className="row no-gutters">
-                  <div className="col-md-5">
+              <div
+                className="modal-body p-0"
+                style={{
+                  backgroundColor: "#1a1f3e !important",
+                }}
+              >
+                <div
+                  className="no-gutters"
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    flexDirection: "row",
+                  }}
+                >
+                  <div>
                     <Image
-                      src="/assets/images/office_and_location/25680723-IMG_9380.jpg"
+                      src="/assets/images/contact/qrcode.JPG"
                       alt="Office Location"
-                      width={400}
+                      width={300}
                       height={300}
                       style={{
                         width: "100%",
@@ -154,8 +172,8 @@ const FooterSection = () => {
                     />
                   </div>
                   <div
-                    className="col-md-7 p-4"
                     style={{ backgroundColor: "#1a1f3e", color: "white" }}
+                    className="p-4"
                   >
                     <h4 style={{ color: "#D4AF37", marginBottom: "20px" }}>
                       {t("contact_us")}

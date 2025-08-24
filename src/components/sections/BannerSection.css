@@ -1,8 +1,57 @@
 .travel_banner_outer {
   background: url('/assets/images/banner3-backgroundimage.jpg') no-repeat center;
   background-size: cover;
+  background-attachment: fixed;
   padding: 200px 0 120px;
   position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.banner-container {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+  margin: 0;
+}
+
+.banner_image_left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.banner-logo {
+  width: 400px;
+  height: auto;
+  max-width: none;
+}
+
+.banner_content_fullwidth {
+  width: 100%;
+  padding: 0 50px;
+  text-align: left;
+}
+
+.banner-title-fullwidth {
+  width: 100%;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.banner-description {
+  width: 100%;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.banner-tagline {
+  width: 100%;
+  text-align: left;
 }
 
 .banner_content h5 {
@@ -111,6 +160,8 @@
 @media (max-width: 991px) {
   .travel_banner_outer {
     padding: 150px 0 80px;
+    min-height: 100vh;
+    background-attachment: scroll;
   }
 
   .banner_content h1 {
@@ -120,15 +171,44 @@
   .banner_wrapper {
     margin-top: 50px;
   }
+
+  .banner_content_fullwidth {
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .banner-title-fullwidth {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .banner-description {
+    text-align: center;
+  }
+
+  .banner-tagline {
+    text-align: center;
+  }
 }
 
 @media (max-width: 767px) {
   .travel_banner_outer {
     padding: 120px 0 60px;
+    min-height: 100vh;
+    background-attachment: scroll;
+    background-position: center center;
   }
 
   .banner_content h1 {
     font-size: 32px;
+  }
+
+  .banner-title-fullwidth {
+    font-size: 2rem;
+  }
+
+  .banner_content_fullwidth {
+    padding: 0 15px;
   }
 
   .button_wrapper {
@@ -137,5 +217,26 @@
 
   .all_button {
     width: fit-content;
+  }
+}
+
+/* Additional mobile fixes for background image */
+@media (max-width: 480px) {
+  .travel_banner_outer {
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    min-height: 100vh;
+    padding: 100px 0 50px;
+  }
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  .travel_banner_outer {
+    background-attachment: scroll;
   }
 }

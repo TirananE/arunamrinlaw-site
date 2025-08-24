@@ -50,7 +50,10 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="navbar" style={{backgroundColor: 'rgb(255, 255, 255) !important'}}>
+    <nav
+      className="navbar"
+      style={{ backgroundColor: "rgb(255, 255, 255) !important" }}
+    >
       <div className="navbar-container">
         <div className="navbar-brand">
           {/* Arunamrinlaw */}
@@ -88,10 +91,7 @@ const NavBar = () => {
             <LanguageSwitcher />
           </div>
           <div className="navbar-item consultation-button-item">
-            <button
-              onClick={openModal}
-              className="consultation-btn"
-            >
+            <button onClick={openModal} className="consultation-btn">
               {t("book_consultation")}
             </button>
           </div>
@@ -131,13 +131,26 @@ const NavBar = () => {
                   aria-label="Close"
                 ></button>
               </div>
-              <div className="modal-body p-0">
-                <div className="row no-gutters">
-                  <div className="col-md-5">
+              <div
+                className="modal-body p-0"
+                style={{
+                  backgroundColor: "#1a1f3e !important",
+                }}
+              >
+                <div
+                  className="no-gutters"
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    flexDirection: "row",
+                  }}
+                >
+                  <div>
                     <Image
-                      src="/assets/images/office_and_location/25680723-IMG_9380.jpg"
+                      src="/assets/images/contact/qrcode.JPG"
                       alt="Office Location"
-                      width={400}
+                      width={300}
                       height={300}
                       style={{
                         width: "100%",
@@ -147,8 +160,8 @@ const NavBar = () => {
                     />
                   </div>
                   <div
-                    className="col-md-7 p-4"
                     style={{ backgroundColor: "#1a1f3e", color: "white" }}
+                    className="p-4"
                   >
                     <h4 style={{ color: "#D4AF37", marginBottom: "20px" }}>
                       {t("contact_us")}

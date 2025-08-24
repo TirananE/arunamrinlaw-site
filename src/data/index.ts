@@ -1,5 +1,5 @@
 // Centralized data structures for reusable components
-import React from 'react';
+import React from "react";
 
 // Translation key interfaces
 export interface StatisticItemWithKeys {
@@ -11,6 +11,7 @@ export interface StatisticItemWithKeys {
 
 export interface TeamMemberWithKeys {
   name: string;
+  nameThai: string;
   positionKey: string;
   imageUrl: string;
 }
@@ -119,41 +120,49 @@ export const statisticsData: StatisticItem[] = [
 export const teamMembersDataKeys: TeamMemberWithKeys[] = [
   {
     name: "Suwat Apaipakdi",
+    nameThai: "สุวัตร อภัยภักดิ์",
     positionKey: "chairman_attorney",
     imageUrl: "/assets/images/members/Suwat.jpg",
   },
   {
     name: "Atchara Saengkhao",
+    nameThai: "อัจฉรา แสงขาว",
     positionKey: "attorney",
     imageUrl: "/assets/images/members/Atchara.jpg",
   },
   {
     name: "Atichart Saengkhao",
+    nameThai: "อติชาต แสงขาว",
     positionKey: "attorney",
     imageUrl: "/assets/images/members/Atichart.jpg",
   },
   {
     name: "Wilaiporn Kaewmool",
+    nameThai: "วิไลพร แก้วมูล",
     positionKey: "attorney",
     imageUrl: "/assets/images/members/Wilaiporn.jpg",
   },
   {
     name: "Thitikarn Wichianbut",
+    nameThai: "ธิติกานต์ วิเชียรบุตร",
     positionKey: "attorney",
     imageUrl: "/assets/images/members/Thitikarn.jpg",
   },
   {
     name: "Sasathorn Thongchai",
+    nameThai: "ศศธร ธงไชย",
     positionKey: "attorney",
     imageUrl: "/assets/images/members/Sasathorn.jpg",
   },
   {
     name: "Nareewat Apaipakdi",
+    nameThai: "นรีวัตร อภัยภักดิ์",
     positionKey: "international_client_representative",
     imageUrl: "/assets/images/members/Nareewat.jpg",
   },
   {
     name: "Nareeporn Apaipakdi",
+    nameThai: "นรีพร อภัยภักดิ์",
     positionKey: "international_client_representative",
     imageUrl: "/assets/images/members/Nareeporn.jpg",
   },
@@ -235,11 +244,13 @@ export const servicesDataKeys: ServiceItemWithKeys[] = [
 export const servicesData: ServiceItem[] = [
   {
     title: "Corporate Law",
-    description: "Business registration, mergers & acquisitions, corporate restructuring",
+    description:
+      "Business registration, mergers & acquisitions, corporate restructuring",
   },
   {
     title: "Commercial Contracts",
-    description: "Contract drafting, review, and negotiation for business transactions",
+    description:
+      "Contract drafting, review, and negotiation for business transactions",
   },
   {
     title: "Litigation",
