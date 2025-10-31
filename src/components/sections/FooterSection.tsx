@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from "../LanguageProvider";
+import ModalPortal from "../ModalPortal";
 
 const FooterSection = () => {
   const { t } = useLanguage();
@@ -20,10 +20,12 @@ const FooterSection = () => {
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12 col-12">
                   <div className="logo-content">
-                    <img
+                    <Image
                       src="/assets/images/logo/2ARUNAMRIN.png"
                       alt="Logo"
                       className="navbar-logo"
+                      width={200}
+                      height={50}
                       style={{
                         width: "200px",
                         height: "auto",
@@ -112,109 +114,115 @@ const FooterSection = () => {
 
       {/* Modal */}
       {isModalOpen && (
-        <div
-          className="modal fade show"
-          style={{
-            display: "block",
-            backgroundColor: "rgba(0,0,0,0.5)",
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            zIndex: 1050,
-          }}
-          onClick={closeModal}
-        >
+        <ModalPortal>
           <div
-            className="modal-dialog modal-dialog-centered modal-lg"
-            onClick={(e) => e.stopPropagation()}
+            className="modal fade show"
+            style={{
+              display: "block",
+              backgroundColor: "rgba(0,0,0,0.5)",
+              position: "fixed",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              zIndex: 20000,
+              overflowY: "auto",
+            }}
+            onClick={closeModal}
           >
-            <div className="modal-content">
-              <div
-                className="modal-header"
-                style={{ backgroundColor: "#1a1f3e", color: "white" }}
-              >
-                <h5 className="modal-title">{t("contact_us")}</h5>
-                <button
-                  type="button"
-                  className="btn-close btn-close-white"
-                  onClick={closeModal}
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div
-                className="modal-body p-0"
-                style={{
-                  backgroundColor: "#1a1f3e !important",
-                }}
-              >
+            <div
+              className="modal-dialog modal-dialog-centered modal-lg"
+              onClick={(e) => e.stopPropagation()}
+              style={{
+                margin: "1.75rem auto",
+              }}
+            >
+              <div className="modal-content">
                 <div
-                  className="no-gutters"
+                  className="modal-header"
+                  style={{ backgroundColor: "#1a1f3e", color: "white" }}
+                >
+                  <h5 className="modal-title">{t("contact_us")}</h5>
+                  <button
+                    type="button"
+                    className="btn-close btn-close-white"
+                    onClick={closeModal}
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div
+                  className="modal-body p-0"
                   style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    flexDirection: "row",
+                    backgroundColor: "#1a1f3e !important",
                   }}
                 >
-                  <div>
-                    <Image
-                      src="/assets/images/contact/qrcode.JPG"
-                      alt="Office Location"
-                      width={300}
-                      height={300}
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
-                  </div>
                   <div
-                    style={{ backgroundColor: "#1a1f3e", color: "white" }}
-                    className="p-4"
+                    className="no-gutters"
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      flexDirection: "row",
+                    }}
                   >
-                    <h4 style={{ color: "#D4AF37", marginBottom: "20px" }}>
-                      {t("contact_us")}
-                    </h4>
-                    <div className="contact-info">
-                      <div className="mb-3">
-                        <i
-                          className="fa-solid fa-location-dot me-2"
-                          style={{ color: "#D4AF37" }}
-                        ></i>
-                        <a
-                          href="https://maps.app.goo.gl/rw8kxHS5FBBUd1SU8?g_st=com.google.maps.preview.copy"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-decoration-none"
-                          style={{ color: "white" }}
-                        >
-                          109/12, SOI LAT PHRAO 23, LAT PHRAO, CHANKASEM,
-                          CHATUCHAK, BANGKOK 10900
-                        </a>
-                      </div>
-                      <div className="mb-3">
-                        <i
-                          className="fa-solid fa-phone me-2"
-                          style={{ color: "#D4AF37" }}
-                        ></i>
-                        <span>{t("call")}: 02-513-0130-4</span>
-                      </div>
-                      <div className="mb-3">
-                        <i
-                          className="fa-solid fa-mobile-alt me-2"
-                          style={{ color: "#D4AF37" }}
-                        ></i>
-                        <span>{t("mobile_phone")}: 084-378-4434</span>
-                      </div>
-                      <div className="mb-3">
-                        <i
-                          className="fa-solid fa-envelope me-2"
-                          style={{ color: "#D4AF37" }}
-                        ></i>
-                        <span>arunamrin.law@gmail.com</span>
+                    <div>
+                      <Image
+                        src="/assets/images/contact/qrcode.JPG"
+                        alt="Office Location"
+                        width={300}
+                        height={300}
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                        }}
+                      />
+                    </div>
+                    <div
+                      style={{ backgroundColor: "#1a1f3e", color: "white" }}
+                      className="p-4"
+                    >
+                      <h4 style={{ color: "#D4AF37", marginBottom: "20px" }}>
+                        {t("contact_us")}
+                      </h4>
+                      <div className="contact-info">
+                        <div className="mb-3">
+                          <i
+                            className="fa-solid fa-location-dot me-2"
+                            style={{ color: "#D4AF37" }}
+                          ></i>
+                          <a
+                            href="https://maps.app.goo.gl/rw8kxHS5FBBUd1SU8?g_st=com.google.maps.preview.copy"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-decoration-none"
+                            style={{ color: "white" }}
+                          >
+                            109/12, SOI LAT PHRAO 23, LAT PHRAO, CHANKASEM,
+                            CHATUCHAK, BANGKOK 10900
+                          </a>
+                        </div>
+                        <div className="mb-3">
+                          <i
+                            className="fa-solid fa-phone me-2"
+                            style={{ color: "#D4AF37" }}
+                          ></i>
+                          <span>{t("call")}: 02-513-0130-4</span>
+                        </div>
+                        <div className="mb-3">
+                          <i
+                            className="fa-solid fa-mobile-alt me-2"
+                            style={{ color: "#D4AF37" }}
+                          ></i>
+                          <span>{t("mobile_phone")}: 084-378-4434</span>
+                        </div>
+                        <div className="mb-3">
+                          <i
+                            className="fa-solid fa-envelope me-2"
+                            style={{ color: "#D4AF37" }}
+                          ></i>
+                          <span>arunamrin.law@gmail.com</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -222,7 +230,7 @@ const FooterSection = () => {
               </div>
             </div>
           </div>
-        </div>
+        </ModalPortal>
       )}
     </section>
   );
