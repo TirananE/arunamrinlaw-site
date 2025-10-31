@@ -6,27 +6,47 @@ import { useLanguage } from "../LanguageProvider";
 
 const BannerSection = () => {
   const { t } = useLanguage();
+  const sectionRef = React.useRef<HTMLElement | null>(null);
+  const logoRef = React.useRef<HTMLDivElement | null>(null);
+
+  React.useEffect(() => {
+    const updateMarker = () => {
+      if (!sectionRef.current || !logoRef.current) return;
+      const secRect = sectionRef.current.getBoundingClientRect();
+      const logoRect = logoRef.current.getBoundingClientRect();
+      const top = Math.max(0, logoRect.top - secRect.top);
+      const height = Math.max(0, logoRect.height);
+      sectionRef.current.style.setProperty("--banner-marker-top", `${top}px`);
+      sectionRef.current.style.setProperty("--banner-marker-height", `${height}px`);
+    };
+
+    updateMarker();
+    window.addEventListener("resize", updateMarker);
+    window.addEventListener("load", updateMarker);
+    return () => {
+      window.removeEventListener("resize", updateMarker);
+      window.removeEventListener("load", updateMarker);
+    };
+  }, []);
 
   return (
     <div className="travel_banner_outer position-relative">
-      <section id="banner" className="travelbanner-con position-relative">
+      <section id="banner" ref={sectionRef} className="travelbanner-con position-relative">
         <div className="banner-container">
-          <div className="row align-items-center h-100 m-0">
-            {/* Image section - Desktop only, sticks to left edge */}
-            <div className="col-lg-6 col-md-6 d-none d-lg-block p-0">
-              <div className="banner_image_left" data-aos="fade-right">
+          <div className="row align-items-center justify-content-center h-100 m-0">
+            {/* Logo + Content in same column so left edges align */}
+            <div className="col-lg-6 col-md-12 col-sm-12 col-12 banner-column">
+              <div className="banner-marker" aria-hidden="true"></div>
+              <div className="banner_image_top mb-4" ref={logoRef} data-aos="fade-down">
                 <Image
                   src="/assets/images/5ARUNAMRIN.png"
                   alt="Arunamrin Law"
-                  width={320}
-                  height={200}
+                  width={150}
+                  height={90}
                   className="banner-logo"
                   priority
                 />
               </div>
-            </div>
-            {/* Content section - Full width on mobile, half on desktop */}
-            <div className="col-lg-6 col-md-12 col-sm-12 col-12">
               <div className="banner_content_fullwidth" data-aos="fade-left">
                 <h2 className="banner-title-fullwidth">{t("banner_title")}</h2>
                 <p className="text-size-18 banner-description">

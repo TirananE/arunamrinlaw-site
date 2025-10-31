@@ -122,7 +122,7 @@ export const teamMembersDataKeys: TeamMemberWithKeys[] = [
     name: "Suwat Apaipakdi",
     nameThai: "สุวัตร อภัยภักดิ์",
     positionKey: "chairman_attorney",
-    imageUrl: "/assets/images/members/Suwat.jpg",
+    imageUrl: "/assets/images/members/image0.jpeg",
   },
   {
     name: "Atchara Saengkhao",

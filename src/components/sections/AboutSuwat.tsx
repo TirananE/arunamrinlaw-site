@@ -17,12 +17,11 @@ const AboutSuwat = () => {
 
   // Array of founder images (only JPG/JPEG files)
   const founderImages = [
+    "/assets/images/founder/IMG_2876.JPG",
     "/assets/images/founder/25680723-IMG_9329.jpg",
     "/assets/images/founder/25680723-IMG_9334.jpg",
     "/assets/images/founder/25680723-IMG_9336.jpg",
     "/assets/images/founder/25680723-IMG_9339.jpg",
-    "/assets/images/founder/IMG_2876.JPG",
-    "/assets/images/founder/IMG_2894.JPG",
   ];
 
   const achievements = isThaiLanguage
@@ -59,8 +58,8 @@ const AboutSuwat = () => {
 
   return (
     <section id="about-suwat" className="travelabout-con position-relative">
-      <h2 className="text-center" style={{marginBottom: "26px"}}>
-        {isThaiLanguage ? t("about_suwat_title"): "About Suwat Apaipakdi"}
+      <h2 className="text-center" style={{ marginBottom: "26px" }}>
+        {isThaiLanguage ? t("about_suwat_title") : "About Suwat Apaipakdi"}
       </h2>
       <div className="container-fluid">
         <div className="row justify-content-center align-items-center">
@@ -68,55 +67,55 @@ const AboutSuwat = () => {
             <div className="about_wrapper position-relative" data-aos="zoom-in">
               <div className="founder-image-slider mb-4 w-100">
                 <Swiper
-                modules={[Navigation, Pagination, Autoplay]}
-                spaceBetween={0}
-                slidesPerView={1}
-                navigation={{
-                  enabled: true,
-                }}
-                pagination={{
-                  clickable: true,
-                  dynamicBullets: true,
-                }}
-                autoplay={{
-                  delay: 3000,
-                  disableOnInteraction: false,
-                  pauseOnMouseEnter: true,
-                }}
-                loop={true}
-                grabCursor={true}
-                className="founderSwiper"
-                breakpoints={{
-                  320: {
-                    navigation: {
-                      enabled: false,
+                  modules={[Navigation, Pagination, Autoplay]}
+                  spaceBetween={0}
+                  slidesPerView={1}
+                  navigation={{
+                    enabled: true,
+                  }}
+                  pagination={{
+                    clickable: true,
+                    dynamicBullets: true,
+                  }}
+                  autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                  }}
+                  loop={true}
+                  grabCursor={true}
+                  className="founderSwiper"
+                  breakpoints={{
+                    320: {
+                      navigation: {
+                        enabled: false,
+                      },
                     },
-                  },
-                  768: {
-                    navigation: {
-                      enabled: true,
+                    768: {
+                      navigation: {
+                        enabled: true,
+                      },
                     },
-                  },
-                }}
-              >
-                {founderImages.map((imageSrc, index) => (
-                  <SwiperSlide key={index}>
-                    <figure className="about-image mb-0">
-                      <Image
-                        src={imageSrc}
-                        alt={`Suwat Apaipakdi - Photo ${index + 1}`}
-                        width={700}
-                        height={500}
-                        className="img-fluid founder-image"
-                        style={{
-                          objectFit: "cover",
-                          width: "100%",
-                          height: "100%",
-                        }}
-                      />
-                    </figure>
-                  </SwiperSlide>
-                ))}
+                  }}
+                >
+                  {founderImages.map((imageSrc, index) => (
+                    <SwiperSlide key={index}>
+                      <figure className="about-image mb-0">
+                        <Image
+                          src={imageSrc}
+                          alt={`Suwat Apaipakdi - Photo ${index + 1}`}
+                          width={700}
+                          height={500}
+                          className="img-fluid founder-image"
+                          style={{
+                            objectFit: "cover",
+                            width: "100%",
+                            height: "100%",
+                          }}
+                        />
+                      </figure>
+                    </SwiperSlide>
+                  ))}
                 </Swiper>
               </div>
             </div>
@@ -130,22 +129,29 @@ const AboutSuwat = () => {
                 <div className="achievements-grid">
                   <div className="achievements-column">
                     <ul className="list-unstyled mb-0">
-                      {achievements.slice(0, Math.ceil(achievements.length / 2)).map((achievement, index) => (
-                        <li key={index} className="achievement-item">
-                          <i className="fa fa-check" aria-hidden="true"></i>
-                          <p className="mb-0 text-size-16">{achievement}</p>
-                        </li>
-                      ))}
+                      {achievements
+                        .slice(0, Math.ceil(achievements.length / 2))
+                        .map((achievement, index) => (
+                          <li key={index} className="achievement-item">
+                            <i className="fa fa-check" aria-hidden="true"></i>
+                            <p className="mb-0 text-size-16">{achievement}</p>
+                          </li>
+                        ))}
                     </ul>
                   </div>
                   <div className="achievements-column">
                     <ul className="list-unstyled mb-0">
-                      {achievements.slice(Math.ceil(achievements.length / 2)).map((achievement, index) => (
-                        <li key={index + Math.ceil(achievements.length / 2)} className="achievement-item">
-                          <i className="fa fa-check" aria-hidden="true"></i>
-                          <p className="mb-0 text-size-16">{achievement}</p>
-                        </li>
-                      ))}
+                      {achievements
+                        .slice(Math.ceil(achievements.length / 2))
+                        .map((achievement, index) => (
+                          <li
+                            key={index + Math.ceil(achievements.length / 2)}
+                            className="achievement-item"
+                          >
+                            <i className="fa fa-check" aria-hidden="true"></i>
+                            <p className="mb-0 text-size-16">{achievement}</p>
+                          </li>
+                        ))}
                     </ul>
                   </div>
                 </div>

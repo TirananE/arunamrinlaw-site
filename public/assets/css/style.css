@@ -2492,11 +2492,14 @@ html {
 /* Banner */
 
 .travelbanner-con {
-  padding: 100px 0;
+  padding: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/472347.jpg);
+  height: 100vh;
+  display: flex;
+  align-items: center;
   /* background-color: #0f122b; */
 }
 .travelbanner-con .banner_content {

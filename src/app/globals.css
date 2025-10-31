@@ -53,6 +53,24 @@
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
+/* Banner column decorative bar (global so it always loads) */
+.banner-column {
+  position: relative;
+}
+
+/* Banner marker using an explicit element so it's easy to control */
+.banner-marker {
+  position: absolute;
+  left: -32px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: rgb(241, 233, 161);
+  /* border-radius: 2px; */
+  z-index: 3;
+  margin-right: 10px;
+}
+
 /* Base styles */
 html {
   scroll-behavior: smooth;
