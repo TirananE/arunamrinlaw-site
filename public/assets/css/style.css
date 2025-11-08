@@ -2718,6 +2718,12 @@ html {
   margin-bottom: 24px;
   padding-right: 60px;
 }
+/* Specific style for commitment_description only */
+@media (min-width: 1400px) {
+  .travelabout-con .about_content .commitment-text {
+    padding-right: 16px;
+  }
+}
 .travelabout-con .about_content .propertise {
   margin-bottom: 28px;
 }

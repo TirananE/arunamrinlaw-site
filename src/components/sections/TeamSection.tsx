@@ -110,6 +110,7 @@ const TeamSection = () => {
           </div>
           <div data-aos="fade-up" className="position-relative">
             <Splide
+              key={language}
               options={{
                 type: "loop",
                 perPage: 3,
@@ -133,8 +134,8 @@ const TeamSection = () => {
               }}
               aria-label="Team Members Carousel"
             >
-              {sortedTeamMembers.map((member, index) => (
-                <SplideSlide key={index}>
+              {sortedTeamMembers.map((member) => (
+                <SplideSlide key={member.name}>
                   <TeamCard
                     name={language === 'th' ? member.nameThai : member.name}
                     position={t(member.positionKey)}
