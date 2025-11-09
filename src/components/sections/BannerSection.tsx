@@ -35,18 +35,18 @@ const BannerSection = () => {
         <div className="banner-container">
           <div className="row align-items-center justify-content-center h-100 m-0">
             {/* Logo + Content in same column so left edges align */}
-            <div className="col-lg-6 col-md-12 col-sm-12 col-12 banner-column">
-              <div className="banner-marker" aria-hidden="true"></div>
+            <div className="col-lg-8 col-md-12 col-sm-12 col-12 banner-column">
               <div className="banner_image_top mb-4" ref={logoRef} data-aos="fade-down">
                 <Image
                   src="/assets/images/5ARUNAMRIN.png"
                   alt="Arunamrin Law"
-                  width={150}
-                  height={90}
+                  width={200}
+                  height={120}
                   className="banner-logo"
                   priority
                 />
               </div>
+              {/* <div className="banner-marker" aria-hidden="true"></div> */}
               <div className="banner_content_fullwidth" data-aos="fade-left">
                 <h2 className="banner-title-fullwidth">{t("banner_title")}</h2>
                 <p className="text-size-18 banner-description">
