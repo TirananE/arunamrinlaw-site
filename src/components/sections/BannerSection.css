@@ -37,7 +37,7 @@
 /* Ensure top logo is centered */
 .banner_image_top {
   display: flex;
-  justify-content: center !important;
+  justify-content: center;
   align-items: center;
   text-align: center;
   width: 100%;
