@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { useLanguage } from "../LanguageProvider";
 
@@ -8,6 +8,9 @@ const BannerSection = () => {
   const { t } = useLanguage();
   const sectionRef = React.useRef<HTMLElement | null>(null);
   const logoRef = React.useRef<HTMLDivElement | null>(null);
+  const [logoWidth, setLogoWidth] = useState(0);
+  const [logoHeight, setLogoHeight] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   React.useEffect(() => {
     const updateMarker = () => {
@@ -32,6 +35,20 @@ const BannerSection = () => {
     };
   }, []);
 
+  React.useEffect(() => {
+    const handleResize = () => {
+      if (typeof window === "undefined") return;
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+      setLogoWidth(mobile ? 200 : 350);
+      setLogoHeight(mobile ? 120 : 220);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="travel_banner_outer position-relative">
       <section
@@ -46,24 +63,24 @@ const BannerSection = () => {
             data-aos="fade-down"
             style={{
               position: "absolute",
-              top: "80px",
+              top: isMobile ? "100px" : "20px",
               left: "50%",
               transform: "translateX(-50%)",
               width: "auto",
             }}
           >
             <Image
-              src="/assets/images/5ARUNAMRIN.png"
+              src="/assets/images/logo/2ARUNAMRIN.png"
               alt="Arunamrin Law"
-              width={200}
-              height={120}
+              width={logoWidth}
+              height={logoHeight}
               className="banner-logo"
               priority
             />
           </div>
           <div className="row align-items-center justify-content-center h-100 m-0">
             {/* Logo + Content in same column so left edges align */}
-            <div className="col-lg-8 col-md-12 col-sm-12 col-12 banner-column">
+            <div className="col-lg-8 col-md-12 col-sm-12 col-12 banner-column mt-5">
               {/* <div className="banner-marker" aria-hidden="true"></div> */}
               <div className="banner_content_fullwidth" data-aos="fade-left">
                 <h2 className="banner-title-fullwidth">{t("banner_title")}</h2>
