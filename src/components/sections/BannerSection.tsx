@@ -82,7 +82,10 @@ const BannerSection = () => {
             {/* Logo + Content in same column so left edges align */}
             <div className="col-lg-8 col-md-12 col-sm-12 col-12 banner-column mt-5">
               {/* <div className="banner-marker" aria-hidden="true"></div> */}
-              <div className="banner_content_fullwidth" data-aos="fade-left">
+              <div
+                className="banner_content_fullwidth text-center"
+                data-aos="fade-left"
+              >
                 <h2 className="banner-title-fullwidth">{t("banner_title")}</h2>
                 <p className="text-size-18 banner-description">
                   {t("banner_description")}
