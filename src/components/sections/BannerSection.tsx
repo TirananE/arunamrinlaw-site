@@ -78,9 +78,9 @@ const BannerSection = () => {
               priority
             />
           </div>
-          <div className="row align-items-center justify-content-center h-100 m-0">
+          <div className="row align-items-center justify-content-center h-100 m-0 banner-row-centered">
             {/* Logo + Content in same column so left edges align */}
-            <div className="col-lg-8 col-md-12 col-sm-12 col-12 banner-column mt-5">
+            <div className="col-lg-8 col-md-12 col-sm-12 col-12 banner-column">
               {/* <div className="banner-marker" aria-hidden="true"></div> */}
               <div
                 className="banner_content_fullwidth text-center"
