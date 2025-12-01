@@ -350,6 +350,19 @@
     font-size: 1rem;
   }
 
+  .banner-title-fullwidth:lang(th) {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .banner-description:lang(th) {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .banner-tagline:lang(th) {
+    font-size: 0.95rem;
+  }
+
   .button_wrapper {
     flex-direction: column;
   }
@@ -364,6 +377,29 @@
 
   .banner-logo {
     max-width: 280px;
+  }
+}
+
+@media (max-width: 575px) {
+  .banner-title-fullwidth:lang(th) {
+    font-size: 26px !important;
+  }
+
+  .banner-description:lang(th),
+  .banner-tagline:lang(th) {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .banner-title-fullwidth:lang(th) {
+    font-size: 18px !important;
+    line-height: 1.25;
+  }
+
+  .banner-description:lang(th),
+  .banner-tagline:lang(th) {
+    font-size: 0.85rem;
   }
 }
 

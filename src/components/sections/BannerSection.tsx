@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useLanguage } from "../LanguageProvider";
 
 const BannerSection = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const sectionRef = React.useRef<HTMLElement | null>(null);
   const logoRef = React.useRef<HTMLDivElement | null>(null);
   const [logoWidth, setLogoWidth] = useState(0);
@@ -86,11 +86,15 @@ const BannerSection = () => {
                 className="banner_content_fullwidth text-center"
                 data-aos="fade-left"
               >
-                <h2 className="banner-title-fullwidth">{t("banner_title")}</h2>
-                <p className="text-size-18 banner-description">
+                <h2 className="banner-title-fullwidth" lang={language}>
+                  {t("banner_title")}
+                </h2>
+                <p className="text-size-18 banner-description" lang={language}>
                   {t("banner_description")}
                 </p>
-                <h5 className="banner-tagline">{t("banner_tagline")}</h5>
+                <h5 className="banner-tagline" lang={language}>
+                  {t("banner_tagline")}
+                </h5>
               </div>
             </div>
           </div>

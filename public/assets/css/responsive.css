@@ -4223,6 +4223,14 @@
     height: 140px;
     right: -40px;
   }
+  .banner-title-fullwidth:lang(th) {
+    font-size: 21px !important;
+  }
+  .banner-description:lang(th),
+  .banner-tagline:lang(th) {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
   .travelbanner-con .banner_wrapper .box {
     left: -45px;
   }
@@ -4428,5 +4436,16 @@
   #button::after {
     font-size: 16px;
     line-height: 16px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .banner-title-fullwidth:lang(th) {
+    font-size: 18px !important;
+    line-height: 1.25;
+  }
+  .banner-description:lang(th),
+  .banner-tagline:lang(th) {
+    font-size: 0.85rem;
   }
 }
