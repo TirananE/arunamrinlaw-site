@@ -63,7 +63,7 @@ const BannerSection = () => {
             data-aos="fade-down"
             style={{
               position: "absolute",
-              top: isMobile ? "100px" : "20px",
+              top: isMobile ? "50px" : "20px",
               left: "50%",
               transform: "translateX(-50%)",
               width: "auto",
