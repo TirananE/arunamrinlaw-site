@@ -23,7 +23,7 @@ const forum = Forum({
 });
 
 export const metadata: Metadata = {
-  title: "Aruna Mrinlaw - Law Firm | สำนักงานกฎหมายอรุณมรินทร์",
+  title: "Arunamrin Law | บริษัท กฎหมายอรุณมรินทร์ จำกัด",
   description: "Professional law firm services | บริการทางกฎหมายมืออาชีพ",
 };
 
